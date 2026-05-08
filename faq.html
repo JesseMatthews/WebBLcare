@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- FAQ PAGE — faq.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Bloomhaven Care</title>
+  <meta name="description" content="Frequently asked questions about Bloomhaven Care home care services — costs, carers, regulation, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- ── PAGE HEADER ── -->
+<div class="page-header">
+  <div class="container">
+    <div class="badge">Frequently Asked Questions</div>
+    <h1 class="section-title">Questions? We have <em>the answers</em></h1>
+    <div class="divider center"></div>
+    <p class="section-sub">Everything you need to know about home care with Bloomhaven. Can't find your answer? Just contact us.</p>
+  </div>
+</div>
+
+<!-- ── FAQ ACCORDION (built from data in js/main.js) ── -->
+<section class="section">
+  <div class="container">
+
+    <!-- FAQ items injected here by renderFAQ() in main.js -->
+    <div class="faq-list" id="faqList"></div>
+
+    <div style="text-align:center;margin-top:55px;">
+      <p style="color:var(--mid);margin-bottom:18px;">Still have a question?</p>
+      <a href="contact.html" class="btn btn-primary">Ask Us Directly</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-text">
+        <h2>Ready to take the next step?</h2>
+        <p>Speak with our friendly team — no pressure, just an honest conversation about your care needs.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html"  class="btn btn-white">Contact Us</a>
+        <a href="services.html" class="btn btn-outline-white">Our Services</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>const CURRENT_PAGE = 'faq';</script>
+<script src="nav.js"></script>
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', renderFAQ);
+</script>
+</body>
+</html>

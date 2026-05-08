@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- RECRUITMENT PAGE — recruit.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Our Team | Bloomhaven Care</title>
+  <meta name="description" content="Join the Bloomhaven Care team. We're looking for compassionate, dedicated carers. See the top 10 skills we look for and the benefits of working with us.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- ── DARK HERO HEADER ── -->
+<div class="recruit-hero">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="badge">Join Our Team</div>
+    <!-- CHANGE: Update headline -->
+    <h1>Do you have what it takes to <em>make a difference?</em></h1>
+    <p>At Bloomhaven Care, we're always seeking passionate, dedicated individuals who want to change lives through the power of compassionate care.</p>
+  </div>
+</div>
+
+<!-- ── TOP 10 SKILLS (built from data in js/main.js) ── -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;max-width:700px;margin:0 auto 20px;">
+      <div class="badge">Essential Skills</div>
+      <h2 class="section-title">Skills of an <em>Outstanding Carer</em></h2>
+      <div class="divider center"></div>
+      <!-- CHANGE: Update source attribution if desired -->
+      <p class="section-sub" style="max-width:100%;">Aligned to the highest standards and CQC guidance — these are the qualities we look for in every Bloomhaven team member.</p>
+    </div>
+    <!-- Skills cards injected here by renderSkills() in main.js -->
+    <div class="skills-grid" id="skillsGrid"></div>
+  </div>
+</section>
+
+<!-- ── IS THIS YOU? ── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="recruit-cta-box">
+      <div class="badge" style="margin-bottom:18px;">Does This Sound Like You?</div>
+      <h2 class="section-title">If you see yourself in these skills, <em>we want to hear from you</em></h2>
+      <div class="divider center"></div>
+      <!-- CHANGE: Update this paragraph -->
+      <p>Whether you're an experienced carer or just starting your care career, Bloomhaven Care offers full training, competitive pay, flexible hours, and a genuinely supportive team. You don't need to be perfect — you just need to care.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+        <a href="contact.html" class="btn btn-primary btn-arrow">Apply via Contact Form</a>
+        <a href="team.html"    class="btn btn-outline">Meet the Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EMPLOYEE BENEFITS ── -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:50px;">
+      <div class="badge">Why Work With Us</div>
+      <h2 class="section-title">Benefits of joining <em>Bloomhaven Care</em></h2>
+      <div class="divider center"></div>
+    </div>
+    <!-- CHANGE: Edit/add/remove benefit cards -->
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon">💷</div><h3>Competitive Pay</h3><p>We pay above industry average and reward loyalty with regular pay reviews.</p></div>
+      <div class="why-card"><div class="why-icon">📚</div><h3>Paid Training</h3><p>Comprehensive induction and ongoing professional development — all fully paid.</p></div>
+      <div class="why-card"><div class="why-icon">⏰</div><h3>Flexible Hours</h3><p>Full-time, part-time, and flexible shifts to suit your lifestyle.</p></div>
+      <div class="why-card"><div class="why-icon">🚗</div><h3>Mileage Allowance</h3><p>We reimburse travel costs between client visits at a fair mileage rate.</p></div>
+      <div class="why-card"><div class="why-icon">📈</div><h3>Career Progression</h3><p>A clear pathway from carer to senior carer, coordinator, and beyond.</p></div>
+      <div class="why-card"><div class="why-icon">💚</div><h3>Wellbeing Support</h3><p>Access to our Employee Assistance Programme and a supportive team culture.</p></div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script>const CURRENT_PAGE = 'recruit';</script>
+<script src="nav.js"></script>
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', renderSkills);
+</script>
+</body>
+</html>

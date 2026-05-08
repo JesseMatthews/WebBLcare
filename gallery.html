@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- GALLERY PAGE — gallery.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Bloomhaven Care</title>
+  <meta name="description" content="A glimpse into life at Bloomhaven Care — real moments of connection, dignity, and joy in home care.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- ── PAGE HEADER ── -->
+<div class="page-header">
+  <div class="container">
+    <div class="badge">Our Gallery</div>
+    <h1 class="section-title">A glimpse into <em>life at Bloomhaven</em></h1>
+    <div class="divider center"></div>
+    <p class="section-sub">Real moments of connection, dignity, and joy. This is what home care looks like when it's done with love.</p>
+  </div>
+</div>
+
+<!-- ── PHOTO GRID ── -->
+<section class="section">
+  <div class="container">
+
+    <!--
+      HOW TO ADD REAL PHOTOS:
+      Replace each img-ph div with:
+        <img src="images/your-photo.jpg" alt="Description">
+      Keep the .gallery-item wrapper and .gallery-overlay div.
+      Recommended sizes: 800×600px JPG, under 200KB each.
+      Free photos: unsplash.com or pexels.com (search "home care")
+    -->
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <!-- Tall item — spans both rows on desktop -->
+        <div class="img-ph img-ph-teal" style="height:100%;">👩‍❤️‍👨</div>
+        <div class="gallery-overlay">Companionship &amp; Connection</div>
+      </div>
+      <div class="gallery-item">
+        <div class="img-ph img-ph-green">🍽️</div>
+        <div class="gallery-overlay">Meal Preparation</div>
+      </div>
+      <div class="gallery-item">
+        <div class="img-ph img-ph-blue">🌷</div>
+        <div class="gallery-overlay">Community Activities</div>
+      </div>
+      <div class="gallery-item">
+        <div class="img-ph img-ph-light">🧘</div>
+        <div class="gallery-overlay">Wellbeing &amp; Therapy</div>
+      </div>
+      <div class="gallery-item">
+        <div class="img-ph img-ph-dark">👨‍👩‍👧</div>
+        <div class="gallery-overlay">Family Support</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── IMPACT STATS ── -->
+<section class="section section-alt">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="badge">Community Impact</div>
+      <h2 class="section-title">Making a difference, <em>every single day</em></h2>
+      <div class="divider center"></div>
+    </div>
+    <!-- CHANGE: Update these statistics -->
+    <div class="why-grid" style="margin-top:50px;">
+      <div class="why-card"><div class="why-num">500+</div><h3>Clients Supported</h3><p>Hundreds of individuals and families have benefited from our care services.</p></div>
+      <div class="why-card"><div class="why-num">75K+</div><h3>Hours of Care Delivered</h3><p>Over seventy-five thousand hours of compassionate, professional care each year.</p></div>
+      <div class="why-card"><div class="why-num">98%</div><h3>Client Satisfaction</h3><p>Independent surveys consistently rate us outstanding across all care quality measures.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-text">
+        <h2>Ready to experience the Bloomhaven difference?</h2>
+        <p>Contact us today for a free, no-obligation assessment.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-white">Get In Touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>const CURRENT_PAGE = 'gallery';</script>
+<script src="nav.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

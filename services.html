@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- SERVICES PAGE — services.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Bloomhaven Care</title>
+  <meta name="description" content="Bloomhaven Care offers a full range of home care services including personal care, medication support, companionship, dementia care, live-in care and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- ── PAGE HEADER ── -->
+<div class="page-header">
+  <div class="container">
+    <div class="badge">Our Services</div>
+    <h1 class="section-title">Care that <em>covers everything</em> you need</h1>
+    <div class="divider center"></div>
+    <p class="section-sub">Click any service card to see exactly what's included. All services are tailored to your individual needs and delivered by trained, compassionate professionals.</p>
+  </div>
+</div>
+
+<!-- ── SERVICE CARDS (built from data in js/main.js) ── -->
+<section class="section">
+  <div class="container">
+    <!-- Cards injected here by renderServices() in main.js -->
+    <div class="services-grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-text">
+        <h2>Not sure which service you need?</h2>
+        <p>Our coordinators will carry out a free home assessment and recommend the perfect care plan.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-white">Book Free Assessment</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SERVICE DETAIL POPUP MODAL ──
+     Populated by openModal() in main.js when a card is clicked. -->
+<div class="modal-overlay" id="serviceModal" onclick="closeModalOutside(event)">
+  <div class="modal" id="modalContent">
+    <div class="modal-img-wrap">
+      <div id="modalImg" style="height:100%;border-radius:22px 22px 0 0;overflow:hidden;"></div>
+      <div class="modal-img-overlay"></div>
+      <div class="modal-img-title" id="modalTitle"></div>
+      <button class="modal-close" onclick="closeModalDirect()" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <p id="modalDesc"></p>
+      <h4>What's Included</h4>
+      <div class="modal-includes" id="modalIncludes"></div>
+      <div class="modal-footer">
+        <a href="contact.html" class="btn btn-primary">Enquire About This Service</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>const CURRENT_PAGE = 'services';</script>
+<script src="nav.js"></script>
+<script src="main.js"></script>
+<script>
+  /* Render service cards as soon as page loads */
+  document.addEventListener('DOMContentLoaded', renderServices);
+</script>
+</body>
+</html>

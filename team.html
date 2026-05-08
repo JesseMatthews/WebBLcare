@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- TEAM PAGE — team.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team | Bloomhaven Care</title>
+  <meta name="description" content="Meet the dedicated Bloomhaven Care team — experienced, compassionate professionals committed to delivering outstanding home care.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- ── PAGE HEADER ── -->
+<div class="page-header">
+  <div class="container">
+    <div class="badge">Our People</div>
+    <h1 class="section-title">The <em>heart</em> of Bloomhaven Care</h1>
+    <div class="divider center"></div>
+    <p class="section-sub">Our people are our greatest asset. Every member of our team shares a passion for making a positive difference in people's lives.</p>
+  </div>
+</div>
+
+<!-- ── TEAM CARDS (built from data in js/main.js) ── -->
+<section class="section">
+  <div class="container">
+    <div class="badge">Leadership Team</div>
+    <h2 class="section-title">Guided by <em>experience</em></h2>
+    <div class="divider"></div>
+    <!-- Cards injected here by renderTeam() in main.js -->
+    <div class="team-grid" id="teamGrid"></div>
+  </div>
+</section>
+
+<!-- ── TEAM VALUES ── -->
+<section class="section section-alt">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="badge">Our Team Values</div>
+      <h2 class="section-title">What makes our team <em>extraordinary</em></h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="why-grid" style="margin-top:50px;">
+      <div class="why-card"><div class="why-icon">❤️</div><h3>Genuine Compassion</h3><p>We recruit people who genuinely love caring for others. Compassion can't be taught — but it can be nurtured.</p></div>
+      <div class="why-card"><div class="why-icon">🏆</div><h3>Professional Training</h3><p>Every carer completes extensive training including manual handling, medication management, and first aid.</p></div>
+      <div class="why-card"><div class="why-icon">🔍</div><h3>Rigorous Vetting</h3><p>All staff undergo enhanced DBS checks, reference verification, and health screening before joining.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-text">
+        <h2>Want to join our amazing team?</h2>
+        <p>We're always looking for caring, compassionate people to join the Bloomhaven family.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="recruit.html" class="btn btn-white">See Careers Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>const CURRENT_PAGE = 'team';</script>
+<script src="nav.js"></script>
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', renderTeam);
+</script>
+</body>
+</html>
