@@ -1,82 +1,138 @@
 <!DOCTYPE html>
-<!-- SERVICES PAGE — services.html -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Services | Bloomhaven Care</title>
-  <meta name="description" content="Bloomhaven Care offers a full range of home care services including personal care, medication support, companionship, dementia care, live-in care and more.">
+  <meta name="description" content="Explore Bloomhaven Care's full range of home care services — personal care, dementia care, live-in care, companionship, medication support and more. CQC regulated.">
+  <link rel="canonical" href="https://www.bloomhavencare.co.uk/services.html">
+  <link rel="icon" type="image/png" href="logo_512.png">
+  <link rel="apple-touch-icon" href="logo_512.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div id="header-placeholder"></div>
 
-<div id="nav-placeholder"></div>
-
-<!-- ── PAGE HEADER ── -->
-<div class="page-header">
+<!-- PAGE HEADER -->
+<header class="page-header" role="banner">
   <div class="container">
     <div class="badge">Our Services</div>
     <h1 class="section-title">Care that <em>covers everything</em> you need</h1>
     <div class="divider center"></div>
-    <p class="section-sub">Click any service card to see exactly what's included. All services are tailored to your individual needs and delivered by trained, compassionate professionals.</p>
+    <p class="section-sub">Every service is tailored to your individual needs and delivered by trained, compassionate professionals. Click any card to learn more.</p>
   </div>
-</div>
+</header>
 
-<!-- ── SERVICE CARDS (built from data in js/main.js) ── -->
-<section class="section">
-  <div class="container">
-    <!-- Cards injected here by renderServices() in main.js -->
-    <div class="services-grid" id="servicesGrid"></div>
-  </div>
-</section>
+<!-- SERVICES GRID -->
+<main id="main">
+  <section class="section">
+    <div class="container">
 
-<!-- ── CTA ── -->
-<div class="cta-section">
+      <!-- Filter bar -->
+      <div class="filter-bar reveal" role="group" aria-label="Filter services by category">
+        <button class="filter-btn active" data-filter="All">All Services</button>
+        <button class="filter-btn" data-filter="Daily Living">Daily Living</button>
+        <button class="filter-btn" data-filter="Health">Health</button>
+        <button class="filter-btn" data-filter="Wellbeing">Wellbeing</button>
+        <button class="filter-btn" data-filter="Specialist">Specialist</button>
+        <button class="filter-btn" data-filter="24/7 Support">24/7 Support</button>
+        <button class="filter-btn" data-filter="Overnight">Overnight</button>
+      </div>
+
+      <!-- Grid filled by JS -->
+      <div id="servicesGrid" class="services-grid" role="list" aria-label="Available services"></div>
+
+    </div>
+  </section>
+
+  <!-- CQC & Assessment info -->
+  <section class="section section-alt">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+        <div class="reveal">
+          <div class="badge">Not Sure Where to Start?</div>
+          <h2 class="section-title">We'll help you <em>find the right care</em></h2>
+          <div class="divider"></div>
+          <p class="section-sub">Our coordinators will carry out a free, no-obligation home assessment to understand your needs and recommend the perfect combination of services.</p>
+          <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary btn-arrow">Book Free Assessment <span class="arrow">→</span></a>
+            <a href="faq.html" class="btn btn-outline">Read the FAQ</a>
+          </div>
+        </div>
+        <div class="reveal">
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div class="why-card" style="border-color:rgba(27,94,59,.12);">
+              <div class="why-icon" aria-hidden="true">📋</div>
+              <h3>Personalised Care Plans</h3>
+              <p>Every care plan is bespoke — co-created with you, your family, and our care team to reflect your exact needs and preferences.</p>
+            </div>
+            <div class="why-card" style="border-color:rgba(27,94,59,.12);">
+              <div class="why-icon" aria-hidden="true">🔄</div>
+              <h3>Regular Plan Reviews</h3>
+              <p>Your needs may change over time. We conduct regular care reviews and adjust your plan to ensure it always fits your life perfectly.</p>
+            </div>
+            <div class="why-card" style="border-color:rgba(27,94,59,.12);">
+              <div class="why-icon" aria-hidden="true">💷</div>
+              <h3>Transparent Pricing</h3>
+              <p>Clear, honest pricing with no hidden charges. We'll also guide you through all funding options available to you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <div class="container">
-    <div class="cta-box">
+    <div class="cta-box reveal">
       <div class="cta-text">
-        <h2>Not sure which service you need?</h2>
-        <p>Our coordinators will carry out a free home assessment and recommend the perfect care plan.</p>
+        <h2>Ready to arrange care?</h2>
+        <p>Our friendly team is here to help. Get in touch today for a free, no-obligation conversation about your care needs.</p>
       </div>
       <div class="cta-actions">
-        <a href="contact.html" class="btn btn-white">Book Free Assessment</a>
+        <a href="contact.html" class="btn btn-gold">Get in Touch</a>
+        <a href="tel:07436125564" class="btn btn-outline-white">📞 07436 125564</a>
       </div>
     </div>
   </div>
-</div>
+</main>
 
-<!-- ── SERVICE DETAIL POPUP MODAL ──
-     Populated by openModal() in main.js when a card is clicked. -->
-<div class="modal-overlay" id="serviceModal" onclick="closeModalOutside(event)">
-  <div class="modal" id="modalContent">
-    <div class="modal-img-wrap">
-      <div id="modalImg" style="height:100%;border-radius:22px 22px 0 0;overflow:hidden;"></div>
-      <div class="modal-img-overlay"></div>
-      <div class="modal-img-title" id="modalTitle"></div>
-      <button class="modal-close" onclick="closeModalDirect()" aria-label="Close">✕</button>
+<!-- SERVICE MODAL -->
+<div id="serviceModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitleText" onclick="closeModalOutside(event)">
+  <div class="modal" tabindex="-1">
+    <div class="modal-header">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div class="modal-icon" id="modalIcon" aria-hidden="true"></div>
+        <div class="modal-title-wrap">
+          <h3 id="modalTitleText"></h3>
+          <div class="modal-tag" id="modalTagText"></div>
+        </div>
+      </div>
+      <button class="modal-close" onclick="closeModalDirect()" aria-label="Close service details">✕</button>
     </div>
     <div class="modal-body">
       <p id="modalDesc"></p>
-      <h4>What's Included</h4>
-      <div class="modal-includes" id="modalIncludes"></div>
-      <div class="modal-footer">
-        <a href="contact.html" class="btn btn-primary">Enquire About This Service</a>
-      </div>
+      <h4>What's included:</h4>
+      <div id="modalIncludes" class="modal-includes"></div>
+      <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;" onclick="closeModalDirect()">
+        Arrange This Service →
+      </a>
     </div>
   </div>
 </div>
 
 <div id="footer-placeholder"></div>
-
 <script>const CURRENT_PAGE = 'services';</script>
-<script src="nav.js"></script>
-<script src="main.js"></script>
-<script>
-  /* Render service cards as soon as page loads */
-  document.addEventListener('DOMContentLoaded', renderServices);
+<script src="nav.js" defer></script>
+<script src="main.js" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', () => {
+    renderServices();
+  });
 </script>
 </body>
 </html>

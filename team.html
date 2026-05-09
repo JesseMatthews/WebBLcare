@@ -1,79 +1,176 @@
 <!DOCTYPE html>
-<!-- TEAM PAGE — team.html -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Team | Bloomhaven Care</title>
-  <meta name="description" content="Meet the dedicated Bloomhaven Care team — experienced, compassionate professionals committed to delivering outstanding home care.">
+  <meta name="description" content="Meet the dedicated, compassionate team behind Bloomhaven Care. Our people are our greatest asset — chosen for their warmth, expertise, and commitment to exceptional care.">
+  <link rel="canonical" href="https://www.bloomhavencare.co.uk/team.html">
+  <link rel="icon" type="image/png" href="logo_512.png">
+  <link rel="apple-touch-icon" href="logo_512.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div id="header-placeholder"></div>
 
-<div id="nav-placeholder"></div>
-
-<!-- ── PAGE HEADER ── -->
-<div class="page-header">
+<!-- PAGE HEADER -->
+<header class="page-header">
   <div class="container">
-    <div class="badge">Our People</div>
+    <div class="badge">Our Team</div>
     <h1 class="section-title">The <em>heart</em> of Bloomhaven Care</h1>
     <div class="divider center"></div>
-    <p class="section-sub">Our people are our greatest asset. Every member of our team shares a passion for making a positive difference in people's lives.</p>
+    <p class="section-sub">Our people are our greatest asset. Every member of our team shares a deep passion for making a positive, lasting difference in people's lives.</p>
   </div>
-</div>
+</header>
 
-<!-- ── TEAM CARDS (built from data in js/main.js) ── -->
-<section class="section">
-  <div class="container">
-    <div class="badge">Leadership Team</div>
-    <h2 class="section-title">Guided by <em>experience</em></h2>
-    <div class="divider"></div>
-    <!-- Cards injected here by renderTeam() in main.js -->
-    <div class="team-grid" id="teamGrid"></div>
-  </div>
-</section>
+<main id="main">
 
-<!-- ── TEAM VALUES ── -->
-<section class="section section-alt">
-  <div class="container">
-    <div style="text-align:center;">
-      <div class="badge">Our Team Values</div>
-      <h2 class="section-title">What makes our team <em>extraordinary</em></h2>
-      <div class="divider center"></div>
+  <!-- TEAM GRID -->
+  <section class="section">
+    <div class="container">
+      <div id="teamGrid" class="team-grid" role="list" aria-label="Our team members"></div>
     </div>
-    <div class="why-grid" style="margin-top:50px;">
-      <div class="why-card"><div class="why-icon">❤️</div><h3>Genuine Compassion</h3><p>We recruit people who genuinely love caring for others. Compassion can't be taught — but it can be nurtured.</p></div>
-      <div class="why-card"><div class="why-icon">🏆</div><h3>Professional Training</h3><p>Every carer completes extensive training including manual handling, medication management, and first aid.</p></div>
-      <div class="why-card"><div class="why-icon">🔍</div><h3>Rigorous Vetting</h3><p>All staff undergo enhanced DBS checks, reference verification, and health screening before joining.</p></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── CTA ── -->
-<div class="cta-section">
+  <!-- TEAM VALUES -->
+  <section class="section section-dark">
+    <div class="container">
+      <div style="text-align:center;" class="reveal">
+        <div class="badge">What Sets Our Team Apart</div>
+        <h2 class="section-title">Selected for <em>character</em>, trained for <em>excellence</em></h2>
+        <div class="divider center"></div>
+        <p class="section-sub" style="margin:0 auto 60px;">Every Bloomhaven carer goes through a rigorous selection process before ever meeting a client. We recruit for values first and train for skills second.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);">
+          <div class="why-icon" aria-hidden="true">💚</div>
+          <h3 style="color:var(--cream);">Genuine Compassion</h3>
+          <p>We select for warmth and empathy above all else. Skills can be taught — character cannot.</p>
+        </div>
+        <div class="why-card reveal" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);">
+          <div class="why-icon" aria-hidden="true">📚</div>
+          <h3 style="color:var(--cream);">Comprehensive Training</h3>
+          <p>Full induction, manual handling, medication administration, dementia awareness, first aid and more — all paid.</p>
+        </div>
+        <div class="why-card reveal" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);">
+          <div class="why-icon" aria-hidden="true">🔒</div>
+          <h3 style="color:var(--cream);">Rigorous Vetting</h3>
+          <p>Enhanced DBS checks, multiple references, right-to-work verification — your safety is our first priority.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A DAY IN THE LIFE -->
+  <section class="section section-alt">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;">
+        <div class="reveal">
+          <div class="badge">A Day in the Life</div>
+          <h2 class="section-title">What does a Bloomhaven carer <em>actually do?</em></h2>
+          <div class="divider"></div>
+          <p style="color:var(--moss);line-height:1.85;margin-bottom:28px;">No two days are ever the same — that's what makes this work so rewarding. Here's a typical day for one of our carers:</p>
+          <div style="display:flex;flex-direction:column;gap:0;" class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">7:30 AM</div>
+              <h4>Morning Briefing</h4>
+              <p>Check care plans, notes from previous visits, and any updates from the coordinator.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">8:00 AM</div>
+              <h4>First Morning Visit</h4>
+              <p>Assisting a client with their morning routine — personal care, breakfast, medication.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">10:30 AM</div>
+              <h4>Companionship Visit</h4>
+              <p>A longer social visit — a cup of tea, conversation, a puzzle, or a walk in the garden.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">1:00 PM</div>
+              <h4>Lunch & Meal Preparation</h4>
+              <p>Preparing a hot, nutritious meal for a client and sharing it with them over conversation.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">4:00 PM</div>
+              <h4>Afternoon & Evening Rounds</h4>
+              <p>More visits — personal care, light housekeeping, medication, and settling clients in for the evening.</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div style="background:linear-gradient(135deg,var(--forest),var(--forest-deep));border-radius:var(--radius);padding:40px;color:var(--cream);">
+            <div class="badge" style="background:rgba(212,175,55,.15);color:var(--gold-light);border-color:rgba(212,175,55,.25);margin-bottom:22px;">Why Our Carers Love Their Work</div>
+            <div style="display:flex;flex-direction:column;gap:20px;">
+              <div style="display:flex;gap:14px;align-items:flex-start;">
+                <span style="font-size:1.5rem;flex-shrink:0" aria-hidden="true">🌟</span>
+                <div>
+                  <h4 style="font-size:.95rem;font-weight:600;font-family:'DM Sans',sans-serif;margin-bottom:4px;">Meaningful, Purpose-Driven Work</h4>
+                  <p style="font-size:.85rem;color:rgba(252,251,247,.75);line-height:1.7;">Every single day you make a genuine, measurable difference to someone's quality of life.</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:14px;align-items:flex-start;">
+                <span style="font-size:1.5rem;flex-shrink:0" aria-hidden="true">💷</span>
+                <div>
+                  <h4 style="font-size:.95rem;font-weight:600;font-family:'DM Sans',sans-serif;margin-bottom:4px;">Competitive Pay & Benefits</h4>
+                  <p style="font-size:.85rem;color:rgba(252,251,247,.75);line-height:1.7;">Above-industry-average pay, mileage allowance, and paid training from day one.</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:14px;align-items:flex-start;">
+                <span style="font-size:1.5rem;flex-shrink:0" aria-hidden="true">📈</span>
+                <div>
+                  <h4 style="font-size:.95rem;font-weight:600;font-family:'DM Sans',sans-serif;margin-bottom:4px;">Real Career Progression</h4>
+                  <p style="font-size:.85rem;color:rgba(252,251,247,.75);line-height:1.7;">Clear pathways from carer to senior carer, coordinator, and management roles.</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:14px;align-items:flex-start;">
+                <span style="font-size:1.5rem;flex-shrink:0" aria-hidden="true">🤝</span>
+                <div>
+                  <h4 style="font-size:.95rem;font-weight:600;font-family:'DM Sans',sans-serif;margin-bottom:4px;">A Supportive Team Culture</h4>
+                  <p style="font-size:.85rem;color:rgba(252,251,247,.75);line-height:1.7;">Supervisors who genuinely listen, regular check-ins, and a team that has your back.</p>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:28px;">
+              <a href="recruit.html" class="btn btn-gold btn-arrow">Join Our Team <span class="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <div class="container">
-    <div class="cta-box">
+    <div class="cta-box reveal">
       <div class="cta-text">
-        <h2>Want to join our amazing team?</h2>
-        <p>We're always looking for caring, compassionate people to join the Bloomhaven family.</p>
+        <h2>Want to join the Bloomhaven family?</h2>
+        <p>We're always looking for passionate, dedicated individuals who want to make a real difference. No experience necessary — just genuine compassion.</p>
       </div>
       <div class="cta-actions">
-        <a href="recruit.html" class="btn btn-white">See Careers Page</a>
+        <a href="recruit.html" class="btn btn-white">See Open Roles</a>
+        <a href="contact.html" class="btn btn-outline-white">Get in Touch</a>
       </div>
     </div>
   </div>
-</div>
+
+</main>
 
 <div id="footer-placeholder"></div>
-
 <script>const CURRENT_PAGE = 'team';</script>
-<script src="nav.js"></script>
-<script src="main.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', renderTeam);
+<script src="nav.js" defer></script>
+<script src="main.js" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', () => { renderTeam(); });
 </script>
 </body>
 </html>

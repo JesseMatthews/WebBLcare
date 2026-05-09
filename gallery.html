@@ -1,105 +1,381 @@
 <!DOCTYPE html>
-<!-- GALLERY PAGE — gallery.html -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery | Bloomhaven Care</title>
-  <meta name="description" content="A glimpse into life at Bloomhaven Care — real moments of connection, dignity, and joy in home care.">
+  <meta name="description" content="A glimpse into the warmth and compassion at the heart of Bloomhaven Care — moments of connection, dignity, and genuine care.">
+  <link rel="canonical" href="https://www.bloomhavencare.co.uk/gallery.html">
+  <link rel="icon" type="image/png" href="logo_512.png">
+  <link rel="apple-touch-icon" href="logo_512.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .gallery-item svg { width: 100%; height: 100%; }
+    .gallery-lightbox {
+      position: fixed; inset: 0;
+      background: rgba(13,36,24,0.95);
+      backdrop-filter: blur(12px);
+      z-index: 2000;
+      display: flex; align-items: center; justify-content: center;
+      padding: 40px;
+      opacity: 0; pointer-events: none;
+      transition: opacity .35s;
+    }
+    .gallery-lightbox.open { opacity: 1; pointer-events: all; }
+    .gallery-lightbox-inner {
+      max-width: 700px; width: 100%;
+      transform: scale(.95);
+      transition: transform .35s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .gallery-lightbox.open .gallery-lightbox-inner { transform: scale(1); }
+    .gallery-lightbox-img {
+      width: 100%; border-radius: 20px; overflow: hidden;
+      box-shadow: 0 40px 80px rgba(0,0,0,.5);
+    }
+    .gallery-lightbox-caption {
+      text-align: center; margin-top: 20px;
+      color: rgba(252,251,247,.85); font-size: .95rem; line-height: 1.6;
+    }
+    .gallery-lightbox-close {
+      position: absolute; top: 20px; right: 20px;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(255,255,255,.1);
+      color: white; font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s;
+    }
+    .gallery-lightbox-close:hover { background: rgba(212,175,55,.3); }
+  </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div id="header-placeholder"></div>
 
-<div id="nav-placeholder"></div>
-
-<!-- ── PAGE HEADER ── -->
-<div class="page-header">
+<!-- PAGE HEADER -->
+<header class="page-header">
   <div class="container">
-    <div class="badge">Our Gallery</div>
-    <h1 class="section-title">A glimpse into <em>life at Bloomhaven</em></h1>
+    <div class="badge">Gallery</div>
+    <h1 class="section-title">Moments that <em>matter</em></h1>
     <div class="divider center"></div>
-    <p class="section-sub">Real moments of connection, dignity, and joy. This is what home care looks like when it's done with love.</p>
+    <p class="section-sub">A glimpse into the warmth, compassion and connection that defines every day at Bloomhaven Care.</p>
   </div>
-</div>
+</header>
 
-<!-- ── PHOTO GRID ── -->
-<section class="section">
-  <div class="container">
+<main id="main">
+  <section class="section">
+    <div class="container">
 
-    <!--
-      HOW TO ADD REAL PHOTOS:
-      Replace each img-ph div with:
-        <img src="images/your-photo.jpg" alt="Description">
-      Keep the .gallery-item wrapper and .gallery-overlay div.
-      Recommended sizes: 800×600px JPG, under 200KB each.
-      Free photos: unsplash.com or pexels.com (search "home care")
-    -->
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <!-- Tall item — spans both rows on desktop -->
-        <div class="img-ph img-ph-teal" style="height:100%;">👩‍❤️‍👨</div>
-        <div class="gallery-overlay">Companionship &amp; Connection</div>
+      <div class="gallery-grid" id="galleryGrid" role="list" aria-label="Gallery of care illustrations">
+
+        <!-- 1: Morning Cup of Tea -->
+        <div class="gallery-item reveal" role="listitem" tabindex="0" data-caption="A quiet morning moment — sharing a cup of tea and conversation." aria-label="Illustration: sharing a morning cup of tea">
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="300" fill="#1B5E3B"/>
+            <circle cx="320" cy="60" r="80" fill="#2E7D52" opacity=".3"/>
+            <!-- Table -->
+            <rect x="80" y="190" width="240" height="12" rx="6" fill="#D4AF37" opacity=".8"/>
+            <rect x="120" y="202" width="8" height="60" rx="4" fill="#D4AF37" opacity=".6"/>
+            <rect x="272" y="202" width="8" height="60" rx="4" fill="#D4AF37" opacity=".6"/>
+            <!-- Teapot -->
+            <ellipse cx="200" cy="178" rx="32" ry="24" fill="#FCFBF7" opacity=".9"/>
+            <rect x="196" y="154" width="8" height="16" rx="4" fill="#FCFBF7" opacity=".9"/>
+            <path d="M232 172 Q250 172 248 188 Q246 200 232 196" fill="none" stroke="#FCFBF7" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+            <path d="M168 176 Q154 176 154 188" fill="none" stroke="#FCFBF7" stroke-width="5" stroke-linecap="round" opacity=".6"/>
+            <!-- Two cups -->
+            <rect x="130" y="178" width="30" height="22" rx="4" fill="#FCFBF7" opacity=".8"/>
+            <path d="M160 187 Q172 187 170 196 Q168 202 160 200" fill="none" stroke="#FCFBF7" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+            <rect x="240" y="178" width="30" height="22" rx="4" fill="#FCFBF7" opacity=".8"/>
+            <path d="M270 187 Q282 187 280 196 Q278 202 270 200" fill="none" stroke="#FCFBF7" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+            <!-- Steam wisps -->
+            <path d="M145 174 Q148 165 145 156" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+            <path d="M152 172 Q155 162 152 153" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+            <path d="M255 174 Q258 165 255 156" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+            <!-- Two figures seated -->
+            <circle cx="130" cy="120" r="24" fill="#4CAF7D" opacity=".8"/>
+            <rect x="108" y="144" width="44" height="50" rx="22" fill="#4CAF7D" opacity=".7"/>
+            <circle cx="270" cy="115" r="22" fill="#D4AF37" opacity=".7"/>
+            <rect x="250" y="137" width="40" height="50" rx="20" fill="#D4AF37" opacity=".6"/>
+            <!-- Gold dots -->
+            <circle cx="370" cy="240" r="5" fill="#D4AF37" opacity=".4"/>
+            <circle cx="30" cy="100" r="4" fill="#D4AF37" opacity=".35"/>
+          </svg>
+          <div class="gallery-caption">Sharing a morning cup of tea — a small moment that means the world</div>
+        </div>
+
+        <!-- 2: Garden Walk -->
+        <div class="gallery-item reveal" role="listitem" tabindex="0" data-caption="A gentle afternoon stroll in the garden — fresh air, sunshine, and companionship." aria-label="Illustration: afternoon walk in the garden">
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="300" fill="#0D3D25"/>
+            <!-- Sky -->
+            <rect width="400" height="180" fill="#1B5E3B" opacity=".5"/>
+            <!-- Sun -->
+            <circle cx="340" cy="60" r="35" fill="#D4AF37" opacity=".4"/>
+            <circle cx="340" cy="60" r="24" fill="#E8CC6A" opacity=".6"/>
+            <!-- Ground -->
+            <ellipse cx="200" cy="260" rx="200" ry="50" fill="#2E7D52" opacity=".6"/>
+            <!-- Path -->
+            <path d="M100 270 Q200 230 300 270" fill="#4CAF7D" opacity=".3" stroke="#4CAF7D" stroke-width="30"/>
+            <!-- Trees -->
+            <rect x="40" y="130" width="12" height="80" rx="6" fill="#0D2418"/>
+            <ellipse cx="46" cy="120" rx="30" ry="40" fill="#2E7D52" opacity=".9"/>
+            <rect x="330" y="120" width="12" height="90" rx="6" fill="#0D2418"/>
+            <ellipse cx="336" cy="108" rx="34" ry="44" fill="#2E7D52" opacity=".9"/>
+            <!-- Flowers -->
+            <circle cx="80" cy="250" r="8" fill="#D4AF37" opacity=".7"/>
+            <circle cx="90" cy="244" r="6" fill="#E8CC6A" opacity=".6"/>
+            <circle cx="300" cy="248" r="7" fill="#D4AF37" opacity=".7"/>
+            <circle cx="310" cy="255" r="5" fill="#E8CC6A" opacity=".6"/>
+            <!-- Two walking figures -->
+            <circle cx="175" cy="175" r="22" fill="#D4AF37" opacity=".85"/>
+            <rect x="156" y="197" width="38" height="55" rx="19" fill="#D4AF37" opacity=".8"/>
+            <rect x="175" y="230" width="10" height="35" rx="5" fill="#B8941E" opacity=".7"/>
+            <rect x="162" y="235" width="10" height="32" rx="5" fill="#B8941E" opacity=".7"/>
+            <circle cx="225" cy="170" r="20" fill="#4CAF7D" opacity=".9"/>
+            <rect x="208" y="190" width="34" height="52" rx="17" fill="#4CAF7D" opacity=".85"/>
+            <rect x="224" y="224" width="9" height="33" rx="4" fill="#2E7D52" opacity=".7"/>
+            <rect x="212" y="228" width="9" height="30" rx="4" fill="#2E7D52" opacity=".7"/>
+            <!-- Linked arms -->
+            <path d="M194 210 Q210 208 212 210" fill="none" stroke="#FCFBF7" stroke-width="5" stroke-linecap="round" opacity=".6"/>
+            <!-- Birds -->
+            <path d="M140 80 Q148 74 156 80" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+            <path d="M260 65 Q268 59 276 65" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+          </svg>
+          <div class="gallery-caption">A gentle afternoon stroll — fresh air and good company</div>
+        </div>
+
+        <!-- 3: Reading Together -->
+        <div class="gallery-item reveal" role="listitem" tabindex="0" data-caption="Quiet companionship — reading together on a peaceful afternoon." aria-label="Illustration: reading together">
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="300" fill="#F4F1E8"/>
+            <circle cx="60" cy="280" r="100" fill="#2E7D52" opacity=".07"/>
+            <circle cx="370" cy="50" r="80" fill="#D4AF37" opacity=".08"/>
+            <!-- Armchair -->
+            <rect x="80" y="160" width="180" height="100" rx="16" fill="#2E7D52" opacity=".75"/>
+            <rect x="60" y="145" width="30" height="115" rx="15" fill="#1B5E3B" opacity=".8"/>
+            <rect x="250" y="145" width="30" height="115" rx="15" fill="#1B5E3B" opacity=".8"/>
+            <rect x="80" y="145" width="180" height="28" rx="14" fill="#1B5E3B" opacity=".8"/>
+            <!-- Person in chair -->
+            <circle cx="175" cy="148" r="28" fill="#D4AF37" opacity=".85"/>
+            <rect x="152" y="176" width="46" height="60" rx="18" fill="#D4AF37" opacity=".8"/>
+            <!-- Book -->
+            <rect x="130" y="210" width="90" height="60" rx="6" fill="#FCFBF7" opacity=".95"/>
+            <line x1="175" y1="210" x2="175" y2="270" stroke="#BAC9BF" stroke-width="2"/>
+            <line x1="148" y1="225" x2="171" y2="225" stroke="#BAC9BF" stroke-width="1.5" opacity=".6"/>
+            <line x1="148" y1="233" x2="171" y2="233" stroke="#BAC9BF" stroke-width="1.5" opacity=".6"/>
+            <line x1="148" y1="241" x2="171" y2="241" stroke="#BAC9BF" stroke-width="1.5" opacity=".6"/>
+            <line x1="179" y1="225" x2="200" y2="225" stroke="#BAC9BF" stroke-width="1.5" opacity=".6"/>
+            <line x1="179" y1="233" x2="200" y2="233" stroke="#BAC9BF" stroke-width="1.5" opacity=".6"/>
+            <!-- Carer figure -->
+            <circle cx="290" cy="180" r="22" fill="#4CAF7D" opacity=".85"/>
+            <rect x="271" y="202" width="38" height="60" rx="19" fill="#4CAF7D" opacity=".8"/>
+            <!-- Lamp -->
+            <rect x="310" y="160" width="6" height="80" rx="3" fill="#D4AF37" opacity=".6"/>
+            <path d="M280 160 Q313 140 346 160" fill="#D4AF37" opacity=".5"/>
+            <circle cx="313" cy="155" r="14" fill="#E8CC6A" opacity=".35"/>
+            <!-- Gold sparkles -->
+            <circle cx="350" cy="200" r="4" fill="#D4AF37" opacity=".4"/>
+            <circle cx="50" cy="180" r="3" fill="#D4AF37" opacity=".35"/>
+          </svg>
+          <div class="gallery-caption">Quiet companionship — reading on a peaceful afternoon</div>
+        </div>
+
+        <!-- 4: WIDE — Hands Together -->
+        <div class="gallery-item reveal" role="listitem" tabindex="0" data-caption="The simple power of holding hands — comfort, connection, and care." aria-label="Illustration: two hands held together in care and comfort">
+          <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="wideGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#0D3D25"/>
+                <stop offset="50%" stop-color="#1B5E3B"/>
+                <stop offset="100%" stop-color="#0D3D25"/>
+              </linearGradient>
+            </defs>
+            <rect width="800" height="300" fill="url(#wideGrad)"/>
+            <!-- Radiating light from centre -->
+            <circle cx="400" cy="150" r="200" fill="#2E7D52" opacity=".15"/>
+            <circle cx="400" cy="150" r="120" fill="#2E7D52" opacity=".12"/>
+            <circle cx="400" cy="150" r="60" fill="#D4AF37" opacity=".08"/>
+            <!-- Left hand (client) -->
+            <ellipse cx="300" cy="170" rx="55" ry="28" fill="#D4AF37" opacity=".75" transform="rotate(-15,300,170)"/>
+            <!-- Fingers left -->
+            <ellipse cx="258" cy="148" rx="12" ry="22" fill="#D4AF37" opacity=".7" transform="rotate(-20,258,148)"/>
+            <ellipse cx="280" cy="136" rx="12" ry="24" fill="#D4AF37" opacity=".72" transform="rotate(-10,280,136)"/>
+            <ellipse cx="304" cy="132" rx="12" ry="24" fill="#D4AF37" opacity=".72" transform="rotate(0,304,132)"/>
+            <ellipse cx="326" cy="138" rx="11" ry="22" fill="#D4AF37" opacity=".7" transform="rotate(10,326,138)"/>
+            <ellipse cx="240" cy="168" rx="11" ry="18" fill="#D4AF37" opacity=".65" transform="rotate(-40,240,168)"/>
+            <!-- Right hand (carer) -->
+            <ellipse cx="500" cy="170" rx="55" ry="28" fill="#4CAF7D" opacity=".8" transform="rotate(15,500,170)"/>
+            <!-- Fingers right -->
+            <ellipse cx="542" cy="148" rx="12" ry="22" fill="#4CAF7D" opacity=".75" transform="rotate(20,542,148)"/>
+            <ellipse cx="520" cy="136" rx="12" ry="24" fill="#4CAF7D" opacity=".77" transform="rotate(10,520,136)"/>
+            <ellipse cx="496" cy="132" rx="12" ry="24" fill="#4CAF7D" opacity=".77" transform="rotate(0,496,132)"/>
+            <ellipse cx="474" cy="138" rx="11" ry="22" fill="#4CAF7D" opacity=".75" transform="rotate(-10,474,138)"/>
+            <ellipse cx="560" cy="168" rx="11" ry="18" fill="#4CAF7D" opacity=".7" transform="rotate(40,560,168)"/>
+            <!-- Join point heart -->
+            <path d="M400 148 C400 148 378 134 378 120 C378 110 388 105 400 116 C412 105 422 110 422 120 C422 134 400 148 400 148Z" fill="#D4AF37" opacity=".9"/>
+            <!-- Decorative gold particles -->
+            <circle cx="200" cy="100" r="5" fill="#D4AF37" opacity=".35"/>
+            <circle cx="160" cy="200" r="4" fill="#D4AF37" opacity=".3"/>
+            <circle cx="600" cy="90" r="5" fill="#D4AF37" opacity=".35"/>
+            <circle cx="640" cy="210" r="4" fill="#D4AF37" opacity=".3"/>
+            <circle cx="400" cy="260" r="6" fill="#D4AF37" opacity=".25"/>
+            <circle cx="100" cy="150" r="3" fill="#D4AF37" opacity=".25"/>
+            <circle cx="700" cy="150" r="3" fill="#D4AF37" opacity=".25"/>
+            <!-- Text hint -->
+            <text x="400" y="38" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="18" fill="rgba(252,251,247,0.55)">The simple power of human connection</text>
+          </svg>
+          <div class="gallery-caption">The simple, profound power of holding hands — comfort, connection, and trust</div>
+        </div>
+
+        <!-- 5: Meal Preparation -->
+        <div class="gallery-item reveal" role="listitem" tabindex="0" data-caption="Preparing a home-cooked meal with love — nourishment for body and soul." aria-label="Illustration: preparing a home-cooked meal together">
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="300" fill="#FCFBF7"/>
+            <circle cx="350" cy="320" r="120" fill="#F4F1E8" opacity=".8"/>
+            <!-- Kitchen counter -->
+            <rect x="40" y="195" width="320" height="14" rx="7" fill="#2E7D52" opacity=".75"/>
+            <rect x="40" y="209" width="320" height="70" rx="0" fill="#1B5E3B" opacity=".55"/>
+            <!-- Pot on stove -->
+            <ellipse cx="200" cy="195" rx="45" ry="14" fill="#0D2418" opacity=".7"/>
+            <rect x="158" y="155" width="84" height="42" rx="10" fill="#1B5E3B" opacity=".8"/>
+            <ellipse cx="200" cy="155" rx="42" ry="12" fill="#2E7D52" opacity=".8"/>
+            <!-- Steam -->
+            <path d="M180 150 Q183 138 180 126" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>
+            <path d="M200 148 Q203 136 200 124" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>
+            <path d="M220 150 Q223 138 220 126" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>
+            <!-- Vegetables on counter -->
+            <circle cx="100" cy="188" r="12" fill="#4CAF7D" opacity=".7"/>
+            <circle cx="122" cy="190" r="10" fill="#D4AF37" opacity=".7"/>
+            <rect x="88" y="183" width="6" height="14" rx="3" fill="#2E7D52" opacity=".6"/>
+            <!-- Bowl of fruit -->
+            <ellipse cx="320" cy="190" rx="30" ry="10" fill="#D4AF37" opacity=".6"/>
+            <circle cx="305" cy="183" r="9" fill="#4CAF7D" opacity=".65"/>
+            <circle cx="320" cy="180" r="9" fill="#D4AF37" opacity=".7"/>
+            <circle cx="335" cy="183" r="8" fill="#2E7D52" opacity=".65"/>
+            <!-- Carer figure -->
+            <circle cx="200" cy="100" r="26" fill="#4CAF7D" opacity=".85"/>
+            <rect x="177" y="126" width="46" height="62" rx="23" fill="#4CAF7D" opacity=".8"/>
+            <!-- Apron -->
+            <rect x="185" y="135" width="30" height="48" rx="8" fill="#FCFBF7" opacity=".5"/>
+            <!-- Gold dots -->
+            <circle cx="360" cy="130" r="5" fill="#D4AF37" opacity=".35"/>
+            <circle cx="40" cy="140" r="4" fill="#D4AF37" opacity=".3"/>
+          </svg>
+          <div class="gallery-caption">A home-cooked meal prepared with care — nourishment for body and soul</div>
+        </div>
+
+        <!-- 6: Evening Comfort -->
+        <div class="gallery-item reveal" role="listitem" tabindex="0" data-caption="A calm, settled evening — the reassurance of knowing someone cares." aria-label="Illustration: a calm settled evening, night care">
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="300" fill="#0D2418"/>
+            <!-- Stars -->
+            <circle cx="60" cy="40" r="2" fill="#D4AF37" opacity=".6"/>
+            <circle cx="130" cy="20" r="1.5" fill="#D4AF37" opacity=".5"/>
+            <circle cx="220" cy="35" r="2" fill="#D4AF37" opacity=".55"/>
+            <circle cx="310" cy="15" r="1.5" fill="#D4AF37" opacity=".5"/>
+            <circle cx="370" cy="50" r="2.5" fill="#D4AF37" opacity=".6"/>
+            <circle cx="90" cy="70" r="1" fill="#FCFBF7" opacity=".4"/>
+            <circle cx="280" cy="55" r="1" fill="#FCFBF7" opacity=".4"/>
+            <!-- Moon -->
+            <circle cx="340" cy="65" r="32" fill="#1B5E3B" opacity=".4"/>
+            <circle cx="360" cy="58" r="26" fill="#D4AF37" opacity=".3"/>
+            <!-- Warm window glow -->
+            <rect x="140" y="100" width="120" height="100" rx="10" fill="#D4AF37" opacity=".15"/>
+            <rect x="148" y="108" width="50" height="44" rx="6" fill="#E8CC6A" opacity=".25"/>
+            <rect x="202" y="108" width="50" height="44" rx="6" fill="#E8CC6A" opacity=".25"/>
+            <rect x="148" y="156" width="104" height="36" rx="6" fill="#E8CC6A" opacity=".2"/>
+            <!-- Bed -->
+            <rect x="60" y="215" width="280" height="55" rx="10" fill="#2E7D52" opacity=".7"/>
+            <rect x="60" y="200" width="280" height="22" rx="10" fill="#1B5E3B" opacity=".8"/>
+            <rect x="60" y="200" width="60" height="90" rx="8" fill="#1B5E3B" opacity=".7"/>
+            <!-- Pillow -->
+            <ellipse cx="130" cy="215" rx="36" ry="18" fill="#FCFBF7" opacity=".5"/>
+            <!-- Person in bed -->
+            <ellipse cx="210" cy="215" rx="70" ry="18" fill="#D4AF37" opacity=".4"/>
+            <circle cx="160" cy="208" r="22" fill="#D4AF37" opacity=".7"/>
+            <!-- Carer beside bed -->
+            <circle cx="330" cy="190" r="20" fill="#4CAF7D" opacity=".8"/>
+            <rect x="313" y="210" width="34" height="55" rx="17" fill="#4CAF7D" opacity=".75"/>
+            <!-- Lamp glow -->
+            <circle cx="80" cy="185" r="20" fill="#D4AF37" opacity=".12"/>
+            <rect x="76" y="185" width="8" height="30" rx="4" fill="#D4AF37" opacity=".5"/>
+            <path d="M56 185 Q80 165 104 185" fill="#D4AF37" opacity=".4"/>
+            <!-- Moon reflection -->
+            <circle cx="380" cy="280" r="50" fill="#1B5E3B" opacity=".12"/>
+          </svg>
+          <div class="gallery-caption">A calm, settled evening — the peace of knowing someone is there</div>
+        </div>
+
       </div>
-      <div class="gallery-item">
-        <div class="img-ph img-ph-green">🍽️</div>
-        <div class="gallery-overlay">Meal Preparation</div>
-      </div>
-      <div class="gallery-item">
-        <div class="img-ph img-ph-blue">🌷</div>
-        <div class="gallery-overlay">Community Activities</div>
-      </div>
-      <div class="gallery-item">
-        <div class="img-ph img-ph-light">🧘</div>
-        <div class="gallery-overlay">Wellbeing &amp; Therapy</div>
-      </div>
-      <div class="gallery-item">
-        <div class="img-ph img-ph-dark">👨‍👩‍👧</div>
-        <div class="gallery-overlay">Family Support</div>
-      </div>
+
+      <!-- Note -->
+      <p style="text-align:center;color:var(--moss);font-size:.88rem;margin-top:40px;line-height:1.8;" class="reveal">
+        <em>Illustrations above represent the warmth and spirit of Bloomhaven Care. Real photographs of our team and clients will be added here as we grow — with full consent and respect for everyone's privacy.</em>
+      </p>
+
     </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- ── IMPACT STATS ── -->
-<section class="section section-alt">
+  <!-- CTA -->
   <div class="container">
-    <div style="text-align:center;">
-      <div class="badge">Community Impact</div>
-      <h2 class="section-title">Making a difference, <em>every single day</em></h2>
-      <div class="divider center"></div>
-    </div>
-    <!-- CHANGE: Update these statistics -->
-    <div class="why-grid" style="margin-top:50px;">
-      <div class="why-card"><div class="why-num">500+</div><h3>Clients Supported</h3><p>Hundreds of individuals and families have benefited from our care services.</p></div>
-      <div class="why-card"><div class="why-num">75K+</div><h3>Hours of Care Delivered</h3><p>Over seventy-five thousand hours of compassionate, professional care each year.</p></div>
-      <div class="why-card"><div class="why-num">98%</div><h3>Client Satisfaction</h3><p>Independent surveys consistently rate us outstanding across all care quality measures.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ── CTA ── -->
-<div class="cta-section">
-  <div class="container">
-    <div class="cta-box">
+    <div class="cta-box reveal">
       <div class="cta-text">
-        <h2>Ready to experience the Bloomhaven difference?</h2>
-        <p>Contact us today for a free, no-obligation assessment.</p>
+        <h2>Experience the Bloomhaven difference</h2>
+        <p>These moments of genuine connection are what we create, every single day. Get in touch to arrange a free, no-obligation assessment.</p>
       </div>
       <div class="cta-actions">
-        <a href="contact.html" class="btn btn-white">Get In Touch</a>
+        <a href="contact.html" class="btn btn-white">Book a Free Assessment</a>
+        <a href="services.html" class="btn btn-outline-white">View Services</a>
       </div>
     </div>
+  </div>
+
+</main>
+
+<!-- Lightbox -->
+<div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+  <button class="gallery-lightbox-close" id="lightboxClose" aria-label="Close lightbox">✕</button>
+  <div class="gallery-lightbox-inner">
+    <div class="gallery-lightbox-img" id="lightboxImg"></div>
+    <p class="gallery-lightbox-caption" id="lightboxCaption"></p>
   </div>
 </div>
 
 <div id="footer-placeholder"></div>
-
 <script>const CURRENT_PAGE = 'gallery';</script>
-<script src="nav.js"></script>
-<script src="main.js"></script>
+<script src="nav.js" defer></script>
+<script src="main.js" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('galleryLightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    const lbCap = document.getElementById('lightboxCaption');
+
+    items.forEach(item => {
+      item.addEventListener('click', () => openLightbox(item));
+      item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(item); } });
+    });
+
+    function openLightbox(item) {
+      lbImg.innerHTML = item.querySelector('svg').outerHTML;
+      lbCap.textContent = item.dataset.caption || '';
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('lightboxClose').focus();
+    }
+
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
 </body>
 </html>

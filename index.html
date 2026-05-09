@@ -1,60 +1,111 @@
 <!DOCTYPE html>
-<!-- HOME PAGE — index.html -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bloomhaven Care | Compassionate Home Care Services</title>
-  <meta name="description" content="Bloomhaven Care — Compassionate Care. Trusted Support. Better Life. Professional CQC-regulated home care delivered to your door.">
+  <meta name="description" content="Bloomhaven Care — CQC-regulated, compassionate home care delivered with dignity and warmth. Personal care, dementia care, live-in care & more. Free home assessment. Call 07436 125564.">
+  <link rel="canonical" href="https://www.bloomhavencare.co.uk/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.bloomhavencare.co.uk/">
+  <meta property="og:title" content="Bloomhaven Care | Compassionate Home Care">
+  <meta property="og:description" content="Professional, CQC-regulated home care delivered with dignity and genuine warmth. Free home assessment.">
+  <meta property="og:image" content="https://www.bloomhavencare.co.uk/logo_1024.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bloomhaven Care | Compassionate Home Care">
+  <meta name="twitter:description" content="CQC-regulated home care. Personal care, dementia care, live-in care & more.">
+  <link rel="icon" type="image/png" href="logo_512.png">
+  <link rel="apple-touch-icon" href="logo_512.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bloomhaven Care Ltd",
+    "description": "CQC-regulated home care agency providing personal care, dementia care, live-in care, and companionship services.",
+    "url": "https://www.bloomhavencare.co.uk",
+    "logo": "https://www.bloomhavencare.co.uk/logo_transparent.png",
+    "telephone": "+447436125564",
+    "email": "info@bloomhavencare.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+    ]
+  }
+  </script>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div id="header-placeholder"></div>
 
-<!-- Nav injected by js/nav.js -->
-<div id="nav-placeholder"></div>
-
-<!-- ══════════════════════════════════
-     HERO SECTION
-     ══════════════════════════════════ -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-pattern"></div>
+<!-- ══════════════════════════════════════
+     HERO
+     ══════════════════════════════════════ -->
+<section class="hero" id="main" aria-label="Welcome to Bloomhaven Care">
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="hero-orbs" aria-hidden="true">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+  </div>
   <div class="container">
-    <div class="hero-inner">
+    <div class="hero-content">
 
-      <!-- Left: Text -->
-      <div>
-        <div class="hero-eyebrow">Compassionate Care. Trusted Support. Better Life.</div>
-        <!-- CHANGE: Update headline -->
-        <h1>Caring for those <em>who matter most</em></h1>
-        <!-- CHANGE: Update subheading -->
+      <div class="hero-text">
+        <p class="hero-eyebrow">CQC-Regulated Home Care</p>
+        <h1>Caring for those<br><em>who matter most</em></h1>
         <p class="hero-sub">Professional, compassionate home care delivered with dignity and warmth. Bloomhaven Care brings comfort, independence, and peace of mind — right to your door.</p>
         <div class="hero-actions">
-          <a href="services.html" class="btn btn-primary btn-arrow">Explore Services</a>
-          <a href="contact.html"  class="btn btn-outline">Get In Touch</a>
+          <a href="services.html" class="btn btn-gold btn-arrow">
+            Explore Services <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="contact.html" class="btn btn-outline-white">Book Free Assessment</a>
         </div>
-        <!-- CHANGE: Update stats -->
-        <div class="hero-stats">
-          <div class="stat"><div class="stat-num">0</div><div class="stat-label">Clients Supported Milestone</div></div>
-          <div class="stat"><div class="stat-num">0</div><div class="stat-label">Years Experience Milestone</div></div>
-          <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Client Satisfaction</div></div>
+        <div class="hero-stats" aria-label="Our achievements">
+          <div class="stat">
+            <div class="stat-num" data-target="0" data-suffix="+" aria-label="0 families supported">0+</div>
+            <div class="stat-label">Families Supported</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="0" data-suffix="" aria-label="0 years combined experience">0</div>
+            <div class="stat-label">Years Combined Exp.</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" aria-label="100% client satisfaction">100%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
         </div>
       </div>
 
-      <!-- Right: Images (hidden on mobile) -->
-      <!-- CHANGE: Replace img-ph divs with real <img src="images/hero.jpg" alt="..."> -->
-      <div class="hero-images">
-        <div class="hero-img hero-img-main"><div class="img-ph img-ph-teal">🏡</div></div>
-        <div class="hero-img hero-img-secondary"><div class="img-ph img-ph-light">❤️</div></div>
-        <div class="hero-float">
-          <div class="hero-float-icon">🏅</div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-badge-float">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           <div>
-            <div class="hero-float-label">CQC Regulated</div>
-            <div class="hero-float-sub">Fully Inspected & Approved</div>
+            <div class="badge-text">CQC Regulated</div>
+            <div class="badge-sub">Fully Inspected & Approved</div>
           </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-label">Our Promise</div>
+          <div class="hero-card-value">Dignity in Every Visit</div>
+          <div class="hero-card-sub">Person-centred care, always</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-label">Availability</div>
+          <div class="hero-card-value">7 Days a Week</div>
+          <div class="hero-card-sub">365 days · Bank holidays included</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-label">Getting Started</div>
+          <div class="hero-card-value">Free Home Assessment</div>
+          <div class="hero-card-sub">No obligation · At your convenience</div>
         </div>
       </div>
 
@@ -62,143 +113,240 @@
   </div>
 </section>
 
-<!-- ── TRUST BAR ── -->
-<!-- CHANGE: Update trust points -->
-<div class="trust-bar">
-  <div class="container">
+<!-- ══════════════════════════════════════
+     TRUST BAR
+     ══════════════════════════════════════ -->
+<div class="trust-bar" aria-label="Trust credentials">
+  <div class="trust-scroll-wrap" aria-hidden="true">
     <div class="trust-inner">
-      <div class="trust-item"><span class="trust-icon">🏅</span> CQC Regulated Provider</div>
-      <div class="trust-item"><span class="trust-icon">✅</span> DBS Checked Staff</div>
-      <div class="trust-item"><span class="trust-icon">⏰</span> 24/7 Support Available</div>
-      <div class="trust-item"><span class="trust-icon">🛡️</span> Fully Insured</div>
-      <div class="trust-item"><span class="trust-icon">💚</span> Person-Centred Care</div>
+      <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> CQC Regulated Provider</div>
+      <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> DBS Checked Staff</div>
+      <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 24/7 Support Available</div>
+      <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Fully Insured</div>
+      <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Person-Centred Care</div>
+      <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Free Home Assessment</div>
+    </div>
+    <!-- Duplicate for seamless scroll -->
+    <div class="trust-inner" aria-hidden="true">
+      <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> CQC Regulated Provider</div>
+      <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> DBS Checked Staff</div>
+      <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 24/7 Support Available</div>
+      <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Fully Insured</div>
+      <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Person-Centred Care</div>
+      <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Free Home Assessment</div>
     </div>
   </div>
 </div>
 
-<!-- ── WHAT IS HOME CARE ── -->
+<!-- ══════════════════════════════════════
+     WHAT IS HOME CARE
+     ══════════════════════════════════════ -->
 <section class="section">
   <div class="container">
     <div class="what-grid">
-      <!-- CHANGE: Replace img-ph with real photos -->
-      <div class="what-images">
-        <div class="what-img-a"><div class="img-ph img-ph-blue">👩‍⚕️</div></div>
-        <div class="what-img-b"><div class="img-ph img-ph-green">🌸</div></div>
-        <div class="what-badge"><div class="what-badge-num">5+</div><div class="what-badge-text">Years of Caring Experince</div></div>
+      <div class="what-art reveal">
+        <svg viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of compassionate home care">
+          <defs>
+            <linearGradient id="artGrad1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#FCFBF7"/>
+              <stop offset="100%" stop-color="#F4F1E8"/>
+            </linearGradient>
+            <linearGradient id="artGrad2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1B5E3B"/>
+              <stop offset="100%" stop-color="#2E7D52"/>
+            </linearGradient>
+          </defs>
+          <rect width="500" height="420" rx="24" fill="url(#artGrad1)"/>
+          <!-- House -->
+          <path d="M100 250 L250 120 L400 250 Z" fill="#1B5E3B" opacity=".9"/>
+          <rect x="130" y="250" width="240" height="140" rx="4" fill="#2E7D52" opacity=".85"/>
+          <!-- Door -->
+          <rect x="215" y="310" width="70" height="80" rx="6" fill="#0D2418"/>
+          <circle cx="275" cy="352" r="4" fill="#D4AF37"/>
+          <!-- Windows -->
+          <rect x="148" y="275" width="55" height="45" rx="6" fill="#FCFBF7" opacity=".8"/>
+          <rect x="297" y="275" width="55" height="45" rx="6" fill="#FCFBF7" opacity=".8"/>
+          <line x1="175" y1="275" x2="175" y2="320" stroke="#E8CC6A" stroke-width="1.5" opacity=".5"/>
+          <line x1="148" y1="297" x2="203" y2="297" stroke="#E8CC6A" stroke-width="1.5" opacity=".5"/>
+          <line x1="324" y1="275" x2="324" y2="320" stroke="#E8CC6A" stroke-width="1.5" opacity=".5"/>
+          <line x1="297" y1="297" x2="352" y2="297" stroke="#E8CC6A" stroke-width="1.5" opacity=".5"/>
+          <!-- Heart -->
+          <path d="M250 200 C250 200 220 180 220 160 C220 148 232 140 250 155 C268 140 280 148 280 160 C280 180 250 200 250 200Z" fill="#D4AF37" opacity=".9"/>
+          <!-- Leaves -->
+          <ellipse cx="90" cy="330" rx="28" ry="50" fill="#4CAF7D" opacity=".6" transform="rotate(-20,90,330)"/>
+          <ellipse cx="410" cy="340" rx="24" ry="44" fill="#4CAF7D" opacity=".6" transform="rotate(20,410,340)"/>
+          <ellipse cx="70" cy="360" rx="20" ry="36" fill="#2E7D52" opacity=".5" transform="rotate(-35,70,360)"/>
+          <!-- Gold dots -->
+          <circle cx="430" cy="160" r="6" fill="#D4AF37" opacity=".7"/>
+          <circle cx="60" cy="190" r="4" fill="#D4AF37" opacity=".5"/>
+          <circle cx="440" cy="280" r="3" fill="#D4AF37" opacity=".6"/>
+        </svg>
+        <div class="what-art-badge">
+          <div class="num">2026</div>
+          <div class="lbl">Founded with purpose</div>
+        </div>
       </div>
-      <div>
+
+      <div class="reveal">
         <div class="badge">What Is Home Care</div>
         <h2 class="section-title">Support that comes <em>to you</em></h2>
         <div class="divider"></div>
         <p class="section-sub">Home care is personalised support delivered in the comfort of your own home. It enables individuals to live independently and safely, maintaining the routines, relationships, and environments they love.</p>
         <div class="what-points">
-          <div class="what-point"><div class="what-pt-icon">🏠</div><div class="what-pt-text"><h4>Stay in Your Own Home</h4><p>Remain in familiar surroundings whilst receiving professional care tailored to your needs.</p></div></div>
-          <div class="what-point"><div class="what-pt-icon">🤝</div><div class="what-pt-text"><h4>Preserve Independence</h4><p>Maintain control over your daily routine, lifestyle choices, and personal preferences.</p></div></div>
-          <div class="what-point"><div class="what-pt-icon">💚</div><div class="what-pt-text"><h4>Consistent Companionship</h4><p>Build genuine relationships with your care team — people who truly know and care for you.</p></div></div>
+          <div class="what-point">
+            <div class="what-pt-icon" aria-hidden="true">🏠</div>
+            <div class="what-pt-text">
+              <h4>Stay in Your Own Home</h4>
+              <p>Remain in familiar surroundings whilst receiving professional care tailored to your individual needs.</p>
+            </div>
+          </div>
+          <div class="what-point">
+            <div class="what-pt-icon" aria-hidden="true">🤝</div>
+            <div class="what-pt-text">
+              <h4>Preserve Your Independence</h4>
+              <p>Maintain control over your daily routine, lifestyle choices, and personal preferences — always.</p>
+            </div>
+          </div>
+          <div class="what-point">
+            <div class="what-pt-icon" aria-hidden="true">💚</div>
+            <div class="what-pt-text">
+              <h4>Consistent Companionship</h4>
+              <p>Build genuine relationships with your care team — people who truly know and care for you.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── WHO WE ARE ── -->
-<section class="section who-section">
+<!-- ══════════════════════════════════════
+     WHO WE ARE
+     ══════════════════════════════════════ -->
+<section class="section section-dark">
   <div class="container">
     <div class="who-inner">
-      <div class="who-text">
+      <div class="who-text reveal">
         <div class="badge">Who We Are</div>
         <h2 class="section-title">A family, caring <em>for yours</em></h2>
         <div class="divider"></div>
-        <p class="section-sub">Founded on the belief that every person deserves exceptional, dignified care, Bloomhaven Care has been a trusted presence in our community for over 15 years.</p>
+        <p class="section-sub">Founded on the belief that every person deserves exceptional, dignified care, Bloomhaven Care was built by experienced care workers who wanted to create the agency they wished had existed for their own loved ones.</p>
         <div class="who-quote">
           <p>"We treat every person we support as we would our own loved ones — with kindness, patience, and unwavering respect."</p>
-          <cite>— Name to be entered, Founder &amp; Director</cite>
+          <cite>— Founder & Director, Bloomhaven Care</cite>
         </div>
       </div>
-      <div class="who-cards">
-        <div class="who-card"><div class="who-card-icon">🎓</div><h4>Expert Training</h4><p>All staff complete rigorous training aligned with NHS and CQC standards.</p></div>
-        <div class="who-card"><div class="who-card-icon">💎</div><h4>Quality Assured</h4><p>Regular care reviews ensure consistently high standards across every visit.</p></div>
-        <div class="who-card"><div class="who-card-icon">🌍</div><h4>Diverse &amp; Inclusive</h4><p>Our team reflects the community we serve with cultural sensitivity.</p></div>
-        <div class="who-card"><div class="who-card-icon">📋</div><h4>Care Plans</h4><p>Individualised plans co-created with clients, families, and healthcare teams.</p></div>
+      <div class="who-cards reveal">
+        <div class="who-card">
+          <div class="who-card-icon" aria-hidden="true">🎓</div>
+          <h4>Expert Training</h4>
+          <p>All staff complete rigorous training aligned with NHS and CQC standards.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-card-icon" aria-hidden="true">💎</div>
+          <h4>Quality Assured</h4>
+          <p>Regular care reviews ensure consistently high standards across every visit.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-card-icon" aria-hidden="true">🌍</div>
+          <h4>Diverse & Inclusive</h4>
+          <p>Our team reflects the community we serve with cultural sensitivity and respect.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-card-icon" aria-hidden="true">📋</div>
+          <h4>Personalised Plans</h4>
+          <p>Individualised care plans co-created with clients, families, and healthcare teams.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── WHY CHOOSE US ── -->
+<!-- ══════════════════════════════════════
+     WHY CHOOSE BLOOMHAVEN
+     ══════════════════════════════════════ -->
 <section class="section section-alt">
   <div class="container">
-    <div style="text-align:center;">
+    <div style="text-align:center;" class="reveal">
       <div class="badge">Why Choose Bloomhaven</div>
       <h2 class="section-title">The <em>difference</em> you can feel</h2>
       <div class="divider center"></div>
       <p class="section-sub" style="margin:0 auto;">We go beyond routine tasks — built on compassion, consistency, and a genuine commitment to your wellbeing.</p>
     </div>
     <div class="why-grid">
-      <div class="why-card"><div class="why-num">01</div><div class="why-icon">🧡</div><h3>Compassion at the Core</h3><p>Every team member is chosen for their warmth and empathy. We care, deeply and genuinely.</p></div>
-      <div class="why-card"><div class="why-num">02</div><div class="why-icon">🔒</div><h3>Safe &amp; Fully Regulated</h3><p>CQC registered, fully insured, and DBS checked. Your safety is never compromised.</p></div>
-      <div class="why-card"><div class="why-num">03</div><div class="why-icon">⭐</div><h3>Consistent Carers</h3><p>We match you with a dedicated carer — familiar, trusted faces at every visit.</p></div>
-      <div class="why-card"><div class="why-num">04</div><div class="why-icon">🕐</div><h3>Flexible Scheduling</h3><p>From short morning visits to live-in care — we adapt to your life, not the other way.</p></div>
-      <div class="why-card"><div class="why-num">05</div><div class="why-icon">💬</div><h3>Open Communication</h3><p>Families stay informed. Our care coordinators are always just a call away.</p></div>
-      <div class="why-card"><div class="why-num">06</div><div class="why-icon">📈</div><h3>Continuous Improvement</h3><p>We seek feedback and invest in ongoing training so our care only gets better.</p></div>
+      <div class="why-card reveal"><div class="why-num" aria-hidden="true">01</div><div class="why-icon" aria-hidden="true">🧡</div><h3>Compassion at the Core</h3><p>Every team member is chosen for their warmth and empathy. We care, deeply and genuinely.</p></div>
+      <div class="why-card reveal"><div class="why-num" aria-hidden="true">02</div><div class="why-icon" aria-hidden="true">🔒</div><h3>Safe & Fully Regulated</h3><p>CQC registered, fully insured, and DBS checked. Your safety is never compromised.</p></div>
+      <div class="why-card reveal"><div class="why-num" aria-hidden="true">03</div><div class="why-icon" aria-hidden="true">⭐</div><h3>Consistent Carers</h3><p>We match you with a dedicated carer — familiar, trusted faces at every single visit.</p></div>
+      <div class="why-card reveal"><div class="why-num" aria-hidden="true">04</div><div class="why-icon" aria-hidden="true">🕐</div><h3>Flexible Scheduling</h3><p>From short morning visits to live-in care — we adapt to your life, not the other way around.</p></div>
+      <div class="why-card reveal"><div class="why-num" aria-hidden="true">05</div><div class="why-icon" aria-hidden="true">💬</div><h3>Open Communication</h3><p>Families stay informed. Our care coordinators are always just a call away.</p></div>
+      <div class="why-card reveal"><div class="why-num" aria-hidden="true">06</div><div class="why-icon" aria-hidden="true">📈</div><h3>Continuous Improvement</h3><p>We seek feedback and invest in ongoing training so our care only gets better.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ── TESTIMONIALS ── -->
-<!-- <section class="section">
+<!-- ══════════════════════════════════════
+     HOW IT WORKS
+     ══════════════════════════════════════ -->
+<section class="section">
   <div class="container">
-    <div style="text-align:center;">
-      <div class="badge">Testimonials</div>
-      <h2 class="section-title">Words from those <em>we've helped</em></h2>
+    <div style="text-align:center;" class="reveal">
+      <div class="badge">How It Works</div>
+      <h2 class="section-title">Getting started is <em>simple</em></h2>
       <div class="divider center"></div>
+      <p class="section-sub" style="margin:0 auto;">Three easy steps — from first contact to your care beginning.</p>
     </div>
-  CHANGE: Update with real client testimonials link when reviews are given
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="quote-mark">"</div>
-        <div class="testimonial-stars">★★★★★</div>
-        <p>"Bloomhaven Care have been an absolute lifeline for our family. The care they provide for my mother is exceptional — she looks forward to her carer's visits every day."</p>
-        <div class="testimonial-author"><div class="testimonial-av">👩</div><div><div class="t-name">Sarah Jenkins</div><div class="t-rel">Daughter of client</div></div></div>
+    <div class="steps-grid" style="margin-top:60px;">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <div class="step-icon" aria-hidden="true">📞</div>
+        <h3>Get In Touch</h3>
+        <p>Call us, email, or fill in our contact form. A friendly coordinator will respond within one working day.</p>
       </div>
-      <div class="testimonial-card">
-        <div class="quote-mark">"</div>
-        <div class="testimonial-stars">★★★★★</div>
-        <p>"I was nervous about having carers come in, but the team made me feel so comfortable and respected. I've regained so much independence and confidence."</p>
-        <div class="testimonial-author"><div class="testimonial-av">👴</div><div><div class="t-name">Robert Collins</div><div class="t-rel">Client, 78</div></div></div>
+      <div class="step-card reveal">
+        <div class="step-num">2</div>
+        <div class="step-icon" aria-hidden="true">🏡</div>
+        <h3>Free Home Assessment</h3>
+        <p>We visit you at home, completely free and with no obligation, to understand your needs and preferences.</p>
       </div>
-      <div class="testimonial-card">
-        <div class="quote-mark">"</div>
-        <div class="testimonial-stars">★★★★★</div>
-        <p>"The professionalism and genuine kindness of the staff is remarkable. They don't just tick boxes — they truly care about the people they support."</p>
-        <div class="testimonial-author"><div class="testimonial-av">👩‍⚕️</div><div><div class="t-name">Dr. Priya Sharma</div><div class="t-rel">Referring GP</div></div></div>
+      <div class="step-card reveal">
+        <div class="step-num">3</div>
+        <div class="step-icon" aria-hidden="true">💚</div>
+        <h3>Care Begins</h3>
+        <p>We create your personalised care plan, introduce your dedicated carer, and care begins at your pace.</p>
       </div>
     </div>
   </div>
 </section>
--->
 
-<!-- ── CTA BANNER ── -->
-<div class="cta-section">
-  <div class="container">
-    <div class="cta-box">
-      <div class="cta-text">
-        <h2>Ready to start your care journey?</h2>
-        <p>Speak with our friendly team today. We'll listen, advise, and create a plan that's perfect for you.</p>
-      </div>
-      <div class="cta-actions">
-        <a href="contact.html"  class="btn btn-white">Get a Free Assessment</a>
-        <a href="services.html" class="btn btn-outline-white">View All Services</a>
-      </div>
+<!-- ══════════════════════════════════════
+     CTA BANNER
+     ══════════════════════════════════════ -->
+<div class="container">
+  <div class="cta-box reveal">
+    <div class="cta-text">
+      <h2>Ready to start your care journey?</h2>
+      <p>Speak with our friendly team today. We'll listen, advise, and create a plan that's perfect for you — no pressure, just an honest conversation.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-white">Get a Free Assessment</a>
+      <a href="services.html" class="btn btn-outline-white">View All Services</a>
     </div>
   </div>
 </div>
 
-<!-- Footer injected by js/nav.js -->
+<!-- Opening hours notice (shown by JS if closed) -->
+<div id="hoursNotice" style="display:none;background:var(--gold-pale);color:var(--forest);text-align:center;padding:12px 20px;font-size:.88rem;border-top:1px solid rgba(212,175,55,0.3);"></div>
+
 <div id="footer-placeholder"></div>
 
 <script>const CURRENT_PAGE = 'home';</script>
-<script src="nav.js"></script>
-<script src="main.js"></script>
+<script src="nav.js" defer></script>
+<script src="main.js" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', () => {
+    initParticles('particleCanvas');
+    initCounters();
+  });
+</script>
 </body>
 </html>
