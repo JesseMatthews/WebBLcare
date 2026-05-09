@@ -32,37 +32,49 @@
    [TOKENS] — Design Tokens
    ════════════════════════════════════════════════════════ */
 :root {
-  /* Palette */
-  --forest:        #1B5E3B;
-  --forest-deep:   #0D3D25;
-  --forest-mid:    #2E7D52;
-  --forest-light:  #4CAF7D;
-  --cream:         #FCFBF7;
-  --cream-dark:    #F4F1E8;
-  --gold:          #D4AF37;
-  --gold-light:    #E8CC6A;
-  --gold-pale:     #FBF6E3;
-  --canopy:        #0D2418;
-  --canopy-mid:    #1A3828;
+  /* ── PALETTE — matched to Bloomhaven Care logo ── */
+
+  /* Sky Blue — primary brand colour (circle, house, CARE text) */
+  --forest:        #1E6BB0;
+  --forest-deep:   #134E8A;
+  --forest-mid:    #3B88D0;
+  --forest-light:  #5BAEE0;
+
+  /* Page backgrounds — light blue-white */
+  --cream:         #F5FAFF;
+  --cream-dark:    #EAF3FB;
+
+  /* Sage Green — secondary brand colour (leaves, hand) — CTA / accent */
+  --gold:          #5EA832;
+  --gold-light:    #7DC84A;
+  --gold-pale:     #E8F5DC;
+
+  /* Deep Navy — "BLOOMHAVEN" text — dark section backgrounds */
+  --canopy:        #1A2650;
+  --canopy-mid:    #243575;
+
+  /* Rose — heart accent (used sparingly) */
+  --rose:          #E8698A;
+  --rose-light:    #FDEEF3;
 
   /* Text */
-  --ink:           #1A2E1F;
-  --ink-mid:       #3A5242;
-  --moss:          #5A7A60;
-  --mist:          #8FA897;
-  --fog:           #BAC9BF;
+  --ink:           #1A2650;
+  --ink-mid:       #2E4070;
+  --moss:          #4A6E8A;
+  --mist:          #7A9CB5;
+  --fog:           #B5CDD8;
 
   /* Glass */
-  --glass-bg:      rgba(252,251,247,0.70);
-  --glass-border:  rgba(212,175,55,0.25);
-  --glass-dark-bg: rgba(13,36,24,0.75);
-  --glass-dark-border: rgba(212,175,55,0.18);
+  --glass-bg:      rgba(245,250,255,0.72);
+  --glass-border:  rgba(59,136,208,0.22);
+  --glass-dark-bg: rgba(26,38,80,0.78);
+  --glass-dark-border: rgba(94,168,50,0.22);
 
   /* Shadows */
-  --shadow-sm:     0 2px 12px rgba(27,94,59,0.08);
-  --shadow-md:     0 8px 40px rgba(27,94,59,0.12);
-  --shadow-lg:     0 20px 60px rgba(27,94,59,0.18);
-  --shadow-gold:   0 0 30px rgba(212,175,55,0.25);
+  --shadow-sm:     0 2px 12px rgba(26,38,80,0.08);
+  --shadow-md:     0 8px 40px rgba(26,38,80,0.12);
+  --shadow-lg:     0 20px 60px rgba(26,38,80,0.18);
+  --shadow-gold:   0 0 30px rgba(94,168,50,0.28);
 
   /* Layout */
   --nav-h:         90px;
@@ -104,7 +116,7 @@ body {
 
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--cream-dark); }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: var(--forest-mid); border-radius: 4px; }
 
 /* Skip to content link */
 .skip-link {
@@ -483,13 +495,13 @@ h1, h2, h3, h4 {
    [HERO] — Full-width hero with particles
    ════════════════════════════════════════════════════════ */
 .hero {
-    position: relative;
-    min-height: 100svh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background: linear-gradient(170deg, #0F3D28 0%, #1B5E3B 50%, #0D3D25 100%);
-    padding-top: var(--nav-h);
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(170deg, var(--canopy) 0%, var(--canopy-mid) 40%, var(--forest-deep) 100%);
+  padding-top: var(--nav-h);
 }
 
 #particleCanvas {
@@ -674,7 +686,7 @@ h1, h2, h3, h4 {
    [TRUST BAR]
    ════════════════════════════════════════════════════════ */
 .trust-bar {
-  background: var(--forest);
+  background: var(--canopy);
   padding: 0;
   overflow: hidden;
 }
@@ -1080,7 +1092,7 @@ h1, h2, h3, h4 {
 .timeline-item p { font-size: .9rem; color: var(--moss); line-height: 1.65; }
 
 .values-strip {
-  background: linear-gradient(135deg, var(--forest), var(--forest-deep));
+  background: linear-gradient(135deg, var(--canopy), var(--canopy-mid));
   padding: 60px 0;
 }
 .values-inner {
@@ -1447,7 +1459,7 @@ h1, h2, h3, h4 {
   font-weight: 700;
   font-size: .92rem;
   z-index: 500;
-  box-shadow: 0 4px 24px rgba(27,94,59,0.4);
+  box-shadow: 0 4px 24px rgba(26,38,80,0.4);
   animation: pulseCall 3s ease-in-out infinite;
 }
 
@@ -1621,8 +1633,8 @@ footer {
 }
 
 @keyframes pulseCall {
-  0%, 100% { box-shadow: 0 4px 24px rgba(27,94,59,0.4); }
-  50% { box-shadow: 0 4px 40px rgba(27,94,59,0.6), 0 0 0 12px rgba(27,94,59,0.08); }
+  0%, 100% { box-shadow: 0 4px 24px rgba(26,38,80,0.4); }
+  50% { box-shadow: 0 4px 40px rgba(26,38,80,0.6), 0 0 0 12px rgba(26,38,80,0.08); }
 }
 
 @keyframes countUp {

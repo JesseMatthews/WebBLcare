@@ -251,7 +251,7 @@ function initParticles(canvasId) {
     ctx.rotate(angle);
     ctx.beginPath();
     ctx.ellipse(0, -r / 2, r / 3, r, 0, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(212,175,55,${alpha})`;
+    ctx.fillStyle = `rgba(94,168,50,${alpha})`;
     ctx.fill();
     ctx.restore();
   }
@@ -292,7 +292,7 @@ function initParticles(canvasId) {
       } else {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.r * .6, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(212,175,55,${this.alpha})`;
+        ctx.fillStyle = `rgba(59,136,208,${this.alpha})`;
         ctx.fill();
       }
     }
