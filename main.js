@@ -292,7 +292,7 @@ function initParticles(canvasId) {
       } else {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.r * .6, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(59,136,208,${this.alpha})`;
+        ctx.fillStyle = `rgba(74,158,229,${this.alpha})`;
         ctx.fill();
       }
     }
