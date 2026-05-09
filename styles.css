@@ -483,13 +483,13 @@ h1, h2, h3, h4 {
    [HERO] — Full-width hero with particles
    ════════════════════════════════════════════════════════ */
 .hero {
-  position: relative;
-  min-height: 100svh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  background: linear-gradient(170deg, var(--canopy) 0%, var(--canopy-mid) 40%, var(--forest-deep) 100%);
-  padding-top: var(--nav-h);
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(170deg, #0F3D28 0%, #1B5E3B 50%, #0D3D25 100%);
+    padding-top: var(--nav-h);
 }
 
 #particleCanvas {
