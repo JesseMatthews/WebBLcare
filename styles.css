@@ -409,7 +409,7 @@ h1, h2, h3, h4 {
   padding: 0 20px;
 }
 .nav-logo-wrap img {
-  height: 70px;
+  height: 200px;
   width: auto;
   transition: height .4s var(--ease), filter .3s;
   filter: drop-shadow(0 4px 16px rgba(27,94,59,0.3));
