@@ -415,7 +415,7 @@ h1, h2, h3, h4 {
   padding: 0 16px;
 }
 .nav-logo-wrap img {
-  height: 350px;
+  height: 250px;
   width: auto;
   transition: height .4s var(--ease);
   image-rendering: -webkit-optimize-contrast;
