@@ -404,6 +404,7 @@ h1, h2, h3, h4 {
 
 /* Logo */
 .nav-logo-wrap {
+ .nav-logo-wrap {
   position: absolute;
   top: -20px;
   left: 50%;
@@ -1171,11 +1172,15 @@ h1, h2, h3, h4 {
    [RECRUIT] — Skills + quick apply
    ════════════════════════════════════════════════════════ */
 .recruit-hero {
-  background: linear-gradient(170deg, var(--canopy) 0%, var(--canopy-mid) 100%);
+  background: linear-gradient(160deg, #2A4A8A 0%, #3A6AC0 40%, #4A8FD5 100%);
   padding: calc(var(--nav-h) + 80px) 0 90px;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
+.recruit-hero .container { display: flex; flex-direction: column; align-items: center; }
+.recruit-hero div[style*="max-width:680px"] { max-width: 680px; text-align: center; }
+.recruit-hero div[style*="display:flex;gap:14px"] { justify-content: center; }
 .recruit-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 700; color: var(--cream); margin-bottom: 20px; line-height: 1.1; }
 .recruit-hero h1 em { font-style: italic; background: linear-gradient(135deg, var(--gold-light), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .recruit-hero p { font-size: 1.05rem; color: var(--fog); max-width: 600px; line-height: 1.8; }
