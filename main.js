@@ -114,46 +114,46 @@ const services = [
    ════════════════════════════════════════════ */
 const team = [
   {
-    name: 'Name to be Entered',
-    role: 'Founder & Director',
-    emoji: '👩',
-    bio: 'Description to be added. Founded Bloomhaven Care in 2026 with a vision to create a home care service built on trust, dignity, and genuine compassion.',
-    quals: ['Leadership & Management','CQC Compliance','Founding Director']
+    name: 'Founding Leadership',
+    role: 'Mission & Service Direction',
+    emoji: '💚',
+    bio: 'Sets the standard for Bloomhaven Care: practical support delivered with kindness, dignity, and careful attention to each person\'s daily life.',
+    quals: ['Person-centred care','Service leadership','Family-first values']
   },
   {
-    name: 'Name to be Added',
-    role: 'Registered Manager',
-    emoji: '👩',
-    bio: 'Description to be added. Oversees all care operations, ensuring every client receives the highest standard of personalised, professional support.',
-    quals: ['NVQ Level 5 Health & Social Care','CQC Compliance Specialist','Quality Assurance']
+    name: 'Registered Care Management',
+    role: 'Care Operations & Quality',
+    emoji: '📋',
+    bio: 'Oversees day-to-day care delivery, care planning, supervision, and quality checks so every visit is safe, respectful, and well coordinated.',
+    quals: ['Care planning','Quality assurance','Safeguarding oversight']
   },
   {
-    name: 'Name to be Added',
-    role: 'Head of Care Quality',
-    emoji: '👨',
-    bio: 'Description to be added. Leads on care standards, staff supervision, and continuous improvement across all our services.',
-    quals: ['NVQ Level 5 Health & Social Care','Quality Assurance','Clinical Governance']
+    name: 'Care Quality Team',
+    role: 'Standards & Continuous Improvement',
+    emoji: '⭐',
+    bio: 'Reviews feedback, supports carers in the field, and keeps standards moving in the right direction through regular checks and practical coaching.',
+    quals: ['Care reviews','Carer supervision','Continuous improvement']
   },
   {
-    name: 'Name to be Added',
-    role: 'Operations Manager',
-    emoji: '👨‍💼',
-    bio: 'Keeps everything running smoothly — from scheduling and logistics to HR and finance — ensuring carers can focus entirely on delivering outstanding care.',
-    quals: ['BA Business Management','CIPD HR Practitioner','ILM Level 5']
+    name: 'Operations Support',
+    role: 'Scheduling & Service Coordination',
+    emoji: '🗓️',
+    bio: 'Keeps visits organised, communication clear, and carers supported so clients and families know what to expect and who to contact.',
+    quals: ['Visit scheduling','Family communication','Responsive support']
   },
   {
-    name: 'Name to be Added',
-    role: 'Lead Care Coordinator',
-    emoji: '👩‍💼',
-    bio: 'Manages client care plans, conducts assessments, and ensures our carers have everything they need. Clients and families love her warm, reassuring approach.',
-    quals: ['NVQ Level 3 Health & Social Care','Mental Health First Aid','Care Coordination']
+    name: 'Care Coordination Team',
+    role: 'Assessments & Care Plans',
+    emoji: '🤝',
+    bio: 'Listens carefully during assessments, builds personalised care plans, and keeps those plans updated as needs, routines, and preferences change.',
+    quals: ['Home assessments','Personalised plans','Review meetings']
   },
   {
-    name: 'Name to be Added',
-    role: 'Training & Development Lead',
-    emoji: '👨‍🏫',
-    bio: 'Description to be added. Responsible for the induction, ongoing training, and professional development of every Bloomhaven carer.',
-    quals: ['Train the Trainer Certified','NVQ Level 4 Health & Social Care','Moving & Handling Instructor']
+    name: 'Carer Development',
+    role: 'Training & Support',
+    emoji: '📚',
+    bio: 'Supports carers from induction onward with practical guidance, refreshers, and a culture where asking for help is part of doing the job well.',
+    quals: ['Induction support','Skills refreshers','Reflective practice']
   }
 ];
 

@@ -114,9 +114,9 @@ const FOOTER_HTML = `
         <ul class="footer-links">
           <li><a href="tel:07436125564">📞 07436 125564</a></li>
           <li><a href="mailto:info@bloomhavencare.co.uk">✉️ info@bloomhavencare.co.uk</a></li>
-          <li><a href="#" aria-label="Office address">📍 Address to be added</a></li>
-          <li><a aria-label="Opening hours">🕐 Mon–Fri 8am–6pm</a></li>
-          <li><a aria-label="Saturday hours">🕑 Sat 9am–1pm</a></li>
+          <li><span aria-label="Service area">📍 Local home care service</span></li>
+          <li><span aria-label="Opening hours">🕐 Mon–Fri 8am–6pm</span></li>
+          <li><span aria-label="Saturday hours">🕑 Sat 9am–1pm</span></li>
         </ul>
       </div>
 
@@ -131,9 +131,9 @@ const FOOTER_HTML = `
         <span class="cert-badge">DBS Checked Staff</span>
       </div>
       <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-        <a href="#">Cookies</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="cookies.html">Cookies</a>
       </div>
     </div>
 
