@@ -22,6 +22,33 @@ const FORM_CONFIG = {
   cc: '',
 };
 
+const SERVICE_IMAGES = [
+  {
+    src: 'https://images.unsplash.com/photo-1773227059522-acc3ae46abdc?w=900&auto=format&fit=crop&q=70',
+    alt: 'Caregiver supporting an older person at home'
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1773227060484-41de85f93a08?w=900&auto=format&fit=crop&q=70',
+    alt: 'Home care worker sharing conversation with an older person'
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1765896387398-1e1ae8d2eb85?w=900&auto=format&fit=crop&q=70',
+    alt: 'Carer helping with friendly companionship'
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1778078985394-de045d13e0fa?w=900&auto=format&fit=crop&q=70',
+    alt: 'Older person receiving calm support at home'
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1773227060422-ee506b865417?w=900&auto=format&fit=crop&q=70',
+    alt: 'Care professional offering practical daily support'
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1770822788455-f14be32b0d00?w=900&auto=format&fit=crop&q=70',
+    alt: 'Caregiver providing reassuring specialist care'
+  }
+];
+
 /* ════════════════════════════════════════════
    [DATA] — SERVICES
    ════════════════════════════════════════════ */
@@ -353,6 +380,7 @@ function renderServices() {
   if (!grid) return;
 
   services.forEach((s, i) => {
+    const image = s.image || SERVICE_IMAGES[i % SERVICE_IMAGES.length];
     const card = document.createElement('div');
     card.className = 'service-card reveal';
     card.setAttribute('role', 'button');
@@ -364,7 +392,7 @@ function renderServices() {
 
     card.innerHTML = `
       <div class="service-img">
-        <div class="service-img-art" style="background:${s.color}" aria-hidden="true">${s.icon}</div>
+        <img src="${image.src}" alt="${image.alt}" loading="lazy">
         <div class="service-tag">${s.tag}</div>
       </div>
       <div class="service-body">

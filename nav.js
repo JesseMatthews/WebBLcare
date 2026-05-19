@@ -1,13 +1,12 @@
 /*
   nav.js — Bloomhaven Care (Warm Futurism Rebuild)
   ──────────────────────────────────────────────────
-  Injects the logo-centric sticky header and footer into every page.
-  The header splits navigation left/right around the central logo.
-  On scroll it collapses to a slim frosted-glass bar.
+  Injects the sticky header and footer into every page.
+  The header keeps the brand fixed on the left with navigation to the right.
 */
 
 /* ══════════════════════════════════════════════
-   HEADER HTML — Logo-centric split nav
+   HEADER HTML — Fixed logo, right aligned nav
    ══════════════════════════════════════════════ */
 const HEADER_HTML = `
 <div id="scrollProgress"></div>
@@ -15,23 +14,17 @@ const HEADER_HTML = `
 <header id="siteHeader" class="at-top">
   <div class="header-inner">
 
-    <!-- Left nav -->
-    <nav class="nav-left" aria-label="Primary navigation left">
+    <!-- Brand -->
+    <a class="nav-logo-wrap" href="index.html" aria-label="Bloomhaven Care — Home">
+      <img src="logo_transparent.jpeg" alt="Bloomhaven Care logo" width="260" height="90">
+    </a>
+
+    <!-- Navigation -->
+    <nav class="nav-right" aria-label="Primary navigation">
       <a href="index.html"    data-page="home">Home</a>
       <a href="services.html" data-page="services">Services</a>
       <a href="about.html"    data-page="about">About Us</a>
-      <a href="team.html"     data-page="team">Our Team</a>
-    </nav>
-
-    <!-- Central logo -->
-    <a class="nav-logo-wrap" href="index.html" aria-label="Bloomhaven Care — Home">
-      <img src="logo_transparent.png" alt="Bloomhaven Care logo" width="160" height="70">
-    </a>
-
-    <!-- Right nav -->
-    <nav class="nav-right" aria-label="Primary navigation right">
       <a href="recruit.html"  data-page="recruit">Join Us</a>
-      <a href="gallery.html"  data-page="gallery">Gallery</a>
       <a href="faq.html"      data-page="faq">FAQ</a>
       <a href="contact.html"  data-page="contact" class="nav-cta">Contact Us</a>
     </nav>
@@ -46,13 +39,11 @@ const HEADER_HTML = `
 
 <!-- Mobile full-screen menu -->
 <div id="mobileMenu" role="dialog" aria-label="Navigation menu" aria-hidden="true">
-  <img src="logo_transparent.png" alt="Bloomhaven Care" class="mobile-menu-logo">
+  <img src="logo_transparent.jpeg" alt="Bloomhaven Care" class="mobile-menu-logo">
   <a href="index.html"    data-page="home">Home</a>
   <a href="services.html" data-page="services">Services</a>
   <a href="about.html"    data-page="about">About Us</a>
-  <a href="team.html"     data-page="team">Our Team</a>
   <a href="recruit.html"  data-page="recruit">Join Us</a>
-  <a href="gallery.html"  data-page="gallery">Gallery</a>
   <a href="faq.html"      data-page="faq">FAQ</a>
   <a href="contact.html"  class="mobile-cta">Contact Us →</a>
 </div>
@@ -68,7 +59,7 @@ const FOOTER_HTML = `
 
       <!-- Brand -->
       <div>
-        <img src="logo_transparent.png" alt="Bloomhaven Care" class="footer-logo-img">
+        <img src="logo_transparent.jpeg" alt="Bloomhaven Care" class="footer-logo-img">
         <p class="footer-tagline">Compassionate Care. Trusted Support. Better Life.</p>
         <p class="footer-desc">Professional, CQC-regulated home care delivered with dignity, respect, and genuine warmth. Trusted by families across the region.</p>
         <div class="footer-socials">
@@ -100,8 +91,6 @@ const FOOTER_HTML = `
         <h4>Company</h4>
         <ul class="footer-links">
           <li><a href="about.html">About Us</a></li>
-          <li><a href="team.html">Our Team</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
           <li><a href="recruit.html">Careers</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="contact.html">Contact Us</a></li>
