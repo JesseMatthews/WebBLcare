@@ -226,7 +226,7 @@ const faqs = [
   },
   {
     q: 'Is Bloomhaven Care regulated by the CQC?',
-    a: 'Yes. Bloomhaven Care is registered with and regulated by the Care Quality Commission (CQC). We undergo regular inspections and are committed to maintaining the highest standards of care across all our services.'
+    a: 'Yes. Bloomhaven Care is registered with and regulated by the Care Quality Commission (CQC). You can view our CQC profile here: <a href="https://www.cqc.org.uk/provider/REPLACE_WITH_CQC_PROVIDER_ID" target="_blank" rel="noopener">Bloomhaven Care CQC profile</a>.'
   },
   {
     q: 'Can care visits be adjusted as needs change over time?',

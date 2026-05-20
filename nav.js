@@ -16,7 +16,7 @@ const HEADER_HTML = `
 
     <!-- Brand -->
     <a class="nav-logo-wrap" href="index.html" aria-label="Bloomhaven Care — Home">
-      <img src="logo_transparent.png" alt="Bloomhaven Care logo" width="260" height="90">
+      <img src="logo_transparent.png" alt="Bloomhaven Care logo" width="340" height="112">
     </a>
 
     <!-- Navigation -->
@@ -61,7 +61,7 @@ const FOOTER_HTML = `
       <div>
         <img src="logo_transparent.png" alt="Bloomhaven Care" class="footer-logo-img">
         <p class="footer-tagline">Compassionate Care. Trusted Support. Better Life.</p>
-        <p class="footer-desc">Professional, CQC-regulated home care delivered with dignity, respect, and genuine warmth. Trusted by families across the region.</p>
+        <p class="footer-desc">Professional, CQC registered home care across Preston and nearby communities, delivered with dignity, respect, and genuine warmth.</p>
         <div class="footer-socials">
           <a class="social-btn" href="https://facebook.com/bloomhavencare" target="_blank" rel="noopener" aria-label="Facebook">f</a>
           <a class="social-btn" href="https://instagram.com/bloomhavencare" target="_blank" rel="noopener" aria-label="Instagram">
@@ -103,7 +103,8 @@ const FOOTER_HTML = `
         <ul class="footer-links">
           <li><a href="tel:07436125564">📞 07436 125564</a></li>
           <li><a href="mailto:info@bloomhavencare.co.uk">✉️ info@bloomhavencare.co.uk</a></li>
-          <li><span aria-label="Service area">📍 Local home care service</span></li>
+          <li><span aria-label="Service area">📍 Preston and surrounding areas</span></li>
+          <li><span aria-label="Office address">🏢 Preston office address to be added</span></li>
           <li><span aria-label="Opening hours">🕐 Mon–Fri 8am–6pm</span></li>
           <li><span aria-label="Saturday hours">🕑 Sat 9am–1pm</span></li>
         </ul>
@@ -115,7 +116,7 @@ const FOOTER_HTML = `
     <div class="footer-bottom">
       <p>© 2026 Bloomhaven Care Ltd. All rights reserved. Registered in England & Wales.</p>
       <div class="footer-certs">
-        <span class="cert-badge">CQC Regulated</span>
+        <a class="cert-badge" href="https://www.cqc.org.uk/provider/REPLACE_WITH_CQC_PROVIDER_ID" target="_blank" rel="noopener">CQC Registered</a>
         <span class="cert-badge">ICO Registered</span>
         <span class="cert-badge">DBS Checked Staff</span>
       </div>
