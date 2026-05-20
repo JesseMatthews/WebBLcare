@@ -24,28 +24,28 @@ const FORM_CONFIG = {
 
 const SERVICE_IMAGES = [
   {
-    src: 'https://images.unsplash.com/photo-1773227059522-acc3ae46abdc?w=900&auto=format&fit=crop&q=70',
-    alt: 'Caregiver supporting an older person at home'
+    src: 'https://images.unsplash.com/photo-1666887360680-9dc27a1d2753?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9tZSUyMGhlYWx0aCUyMGNhcmV8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=72&w=900',
+    alt: 'Care professional checking blood pressure during a home visit'
   },
   {
-    src: 'https://images.unsplash.com/photo-1773227060484-41de85f93a08?w=900&auto=format&fit=crop&q=70',
-    alt: 'Home care worker sharing conversation with an older person'
+    src: 'https://images.unsplash.com/photo-1723433892471-62f113c8c9a0?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9tZSUyMGhlYWx0aCUyMGNhcmV8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=72&w=900',
+    alt: 'Care worker supporting an older person using a wheelchair'
   },
   {
-    src: 'https://images.unsplash.com/photo-1765896387398-1e1ae8d2eb85?w=900&auto=format&fit=crop&q=70',
-    alt: 'Carer helping with friendly companionship'
+    src: 'https://images.unsplash.com/photo-1765896387377-e293914d1e69?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhvbWUlMjBoZWFsdGglMjBjYXJlfGVufDB8fDB8fHww&ixlib=rb-4.1.0&q=72&w=900',
+    alt: 'Care worker and older person laughing together indoors'
   },
   {
-    src: 'https://images.unsplash.com/photo-1778078985394-de045d13e0fa?w=900&auto=format&fit=crop&q=70',
-    alt: 'Older person receiving calm support at home'
+    src: 'https://images.unsplash.com/photo-1666887360726-f55472d96c34?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG9tZSUyMGhlYWx0aCUyMGNhcmV8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=72&w=900',
+    alt: 'Care worker helping an older person use a tablet'
   },
   {
-    src: 'https://images.unsplash.com/photo-1773227060422-ee506b865417?w=900&auto=format&fit=crop&q=70',
-    alt: 'Care professional offering practical daily support'
+    src: 'https://images.unsplash.com/photo-1658632302217-984d432b4d38?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aG9tZSUyMGhlYWx0aCUyMGNhcmV8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=72&w=900',
+    alt: 'Care worker speaking with an older person in a living room'
   },
   {
-    src: 'https://images.unsplash.com/photo-1770822788455-f14be32b0d00?w=900&auto=format&fit=crop&q=70',
-    alt: 'Caregiver providing reassuring specialist care'
+    src: 'https://images.unsplash.com/photo-1758691462477-976f771224d8?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGhvbWUlMjBoZWFsdGglMjBjYXJlfGVufDB8fDB8fHww&ixlib=rb-4.1.0&q=72&w=900',
+    alt: 'Home care consultation with an older person on a couch'
   }
 ];
 

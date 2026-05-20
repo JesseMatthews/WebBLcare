@@ -106,7 +106,7 @@ const FOOTER_HTML = `
           <li><a href="tel:07436125564">📞 07436 125564</a></li>
           <li><a href="mailto:info@bloomhavencare.co.uk">✉️ info@bloomhavencare.co.uk</a></li>
           <li><span aria-label="Service area">📍 Preston and surrounding areas</span></li>
-          <li><span aria-label="Office address">🏢 Preston office address to be added</span></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=4%20Derby%20Street%2C%20Preston%2C%20PR1%201DT" target="_blank" rel="noopener" aria-label="Registered office address">🏢 4 Derby Street, Preston, PR1 1DT</a></li>
           <li><span aria-label="Opening hours">🕐 Mon–Fri 8am–6pm</span></li>
           <li><span aria-label="Saturday hours">🕑 Sat 9am–1pm</span></li>
         </ul>
@@ -116,7 +116,7 @@ const FOOTER_HTML = `
 
     <!-- Bottom bar -->
     <div class="footer-bottom">
-      <p>© 2026 Bloomhaven Care Ltd. All rights reserved. Registered in England & Wales.</p>
+      <p>© 2026 Bloomhaven Care Ltd. All rights reserved. Registered in England & Wales. Company No. 17172482.</p>
       <div class="footer-certs">
         <a class="cert-badge" href="https://www.cqc.org.uk/provider/REPLACE_WITH_CQC_PROVIDER_ID" target="_blank" rel="noopener">CQC Registered</a>
         <span class="cert-badge">ICO Registered</span>

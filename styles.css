@@ -1461,10 +1461,15 @@ a.trust-item:hover { color: var(--gold-light); }
 .contact-card a { color: var(--forest-mid); font-weight: 600; transition: color .2s; }
 .contact-card a:hover { color: var(--gold); }
 
-.map-placeholder {
+.map-placeholder,
+.map-embed {
   background: var(--cream-dark);
   border-radius: var(--radius-sm);
-  height: 180px;
+  height: 220px;
+  overflow: hidden;
+  border: 1px solid rgba(95,158,209,0.18);
+}
+.map-placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1474,9 +1479,14 @@ a.trust-item:hover { color: var(--gold-light); }
   font-size: .88rem;
   text-align: center;
   padding: 20px;
-  border: 1.5px dashed var(--fog);
+  border-style: dashed;
 }
 .map-placeholder .map-pin { font-size: 2rem; }
+.map-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
 .contact-form-wrap {
   background: var(--cream);
