@@ -16,7 +16,7 @@ const HEADER_HTML = `
 
     <!-- Brand -->
     <a class="nav-logo-wrap" href="index.html" aria-label="Bloomhaven Care — Home">
-      <img src="logo_transparent.jpeg" alt="Bloomhaven Care logo" width="260" height="90">
+      <img src="logo_transparent.png" alt="Bloomhaven Care logo" width="260" height="90">
     </a>
 
     <!-- Navigation -->
@@ -39,7 +39,7 @@ const HEADER_HTML = `
 
 <!-- Mobile full-screen menu -->
 <div id="mobileMenu" role="dialog" aria-label="Navigation menu" aria-hidden="true">
-  <img src="logo_transparent.jpeg" alt="Bloomhaven Care" class="mobile-menu-logo">
+  <img src="logo_transparent.png" alt="Bloomhaven Care" class="mobile-menu-logo">
   <a href="index.html"    data-page="home">Home</a>
   <a href="services.html" data-page="services">Services</a>
   <a href="about.html"    data-page="about">About Us</a>
@@ -59,7 +59,7 @@ const FOOTER_HTML = `
 
       <!-- Brand -->
       <div>
-        <img src="logo_transparent.jpeg" alt="Bloomhaven Care" class="footer-logo-img">
+        <img src="logo_transparent.png" alt="Bloomhaven Care" class="footer-logo-img">
         <p class="footer-tagline">Compassionate Care. Trusted Support. Better Life.</p>
         <p class="footer-desc">Professional, CQC-regulated home care delivered with dignity, respect, and genuine warmth. Trusted by families across the region.</p>
         <div class="footer-socials">

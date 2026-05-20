@@ -397,7 +397,7 @@ h1, h2, h3, h4 {
   width: 220px;
   height: 86px;
   overflow: hidden;
-  background: #fff;
+  background: transparent;
   border-radius: var(--radius-xs);
   flex: 0 0 auto;
   transition: width .4s var(--ease), height .4s var(--ease);
@@ -1623,7 +1623,7 @@ footer {
   width: auto;
   max-width: 230px;
   margin-bottom: 16px;
-  background: var(--cream);
+  background: transparent;
   border-radius: var(--radius-xs);
   padding: 6px 10px;
 }
