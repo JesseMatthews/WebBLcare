@@ -1897,12 +1897,12 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     padding: 0;
     pointer-events: auto;
     justify-content: flex-start;
-    width: 226px;
-    height: 70px;
+    width: 246px;
+    height: 74px;
     max-width: none;
   }
-  .nav-logo-wrap img { height: 100%; max-width: none; }
-  #siteHeader.scrolled .nav-logo-wrap { top: auto; width: 192px; height: 56px; }
+  .nav-logo-wrap img { height: 100%; max-width: none; transform: scale(2.05); }
+  #siteHeader.scrolled .nav-logo-wrap { top: auto; width: 214px; height: 62px; }
   #siteHeader.scrolled .nav-logo-wrap img { height: 100%; }
 
   /* ── Hero ── */
@@ -2042,7 +2042,7 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
 @media (max-width: 480px) {
   :root { --section-gap: 50px; }
   .header-inner { padding: 0 16px; }
-  .nav-logo-wrap { width: 198px; height: 60px; max-width: none; }
+  .nav-logo-wrap { width: 236px; height: 72px; max-width: none; }
   .nav-logo-wrap img { height: 100%; max-width: none; }
   .hero-content { padding: 40px 0 48px; }
   .filter-bar { gap: 6px; }
