@@ -55,7 +55,7 @@ const SERVICE_IMAGES = [
 const services = [
   {
     title: 'Personal Care',
-    icon: '🛁',
+    icon: 'PC',
     tag: 'Daily Living',
     color: 'linear-gradient(135deg,#1B5E3B,#2E7D52)',
     summary: 'Dignified, sensitive support with washing, dressing, and personal hygiene — delivered with respect and warmth.',
@@ -64,7 +64,7 @@ const services = [
   },
   {
     title: 'Medication Support',
-    icon: '💊',
+    icon: 'MS',
     tag: 'Health',
     color: 'linear-gradient(135deg,#2E7D52,#4CAF7D)',
     summary: 'Safe, accurate medication prompting and administration by trained carers — giving families total peace of mind.',
@@ -73,7 +73,7 @@ const services = [
   },
   {
     title: 'Companionship',
-    icon: '❤️',
+    icon: 'CO',
     tag: 'Wellbeing',
     color: 'linear-gradient(135deg,#D4AF37,#E8CC6A)',
     summary: 'Meaningful social connection and emotional support to combat loneliness and enrich everyday life.',
@@ -82,7 +82,7 @@ const services = [
   },
   {
     title: 'Meal Preparation',
-    icon: '🍽️',
+    icon: 'MP',
     tag: 'Nutrition',
     color: 'linear-gradient(135deg,#1B5E3B,#D4AF37)',
     summary: 'Nutritious, home-cooked meals tailored to dietary needs, cultural preferences, and medical guidelines.',
@@ -91,7 +91,7 @@ const services = [
   },
   {
     title: 'Housekeeping',
-    icon: '🧹',
+    icon: 'HK',
     tag: 'Home',
     color: 'linear-gradient(135deg,#4CAF7D,#2E7D52)',
     summary: 'Light domestic support to keep the home clean, safe, and comfortable — a peaceful sanctuary.',
@@ -100,7 +100,7 @@ const services = [
   },
   {
     title: 'Dementia Care',
-    icon: '🧠',
+    icon: 'DC',
     tag: 'Specialist',
     color: 'linear-gradient(135deg,#0D2418,#1B5E3B)',
     summary: 'Specialist, compassionate support for people living with dementia — patient, consistent, and deeply caring.',
@@ -109,7 +109,7 @@ const services = [
   },
   {
     title: 'Live-In Care',
-    icon: '🏡',
+    icon: 'LI',
     tag: '24/7 Support',
     color: 'linear-gradient(135deg,#2E7D52,#0D2418)',
     summary: 'Round-the-clock care from a dedicated live-in carer — a compassionate alternative to a residential care home.',
@@ -118,7 +118,7 @@ const services = [
   },
   {
     title: 'Mobility Support',
-    icon: '🦽',
+    icon: 'MO',
     tag: 'Physical Support',
     color: 'linear-gradient(135deg,#1B5E3B,#4CAF7D)',
     summary: 'Safe, confident assistance with movement, transfers, and independence in and around the home.',
@@ -127,7 +127,7 @@ const services = [
   },
   {
     title: 'Night Care',
-    icon: '🌙',
+    icon: 'NC',
     tag: 'Overnight',
     color: 'linear-gradient(135deg,#0D2418,#2E7D52)',
     summary: 'Reassuring overnight support so clients — and families — can rest with peace of mind.',
@@ -143,42 +143,42 @@ const team = [
   {
     name: 'Founding Leadership',
     role: 'Mission & Service Direction',
-    emoji: '💚',
+    mark: 'LD',
     bio: 'Sets the standard for Bloomhaven Care: practical support delivered with kindness, dignity, and careful attention to each person\'s daily life.',
     quals: ['Person-centred care','Service leadership','Family-first values']
   },
   {
     name: 'Registered Care Management',
     role: 'Care Operations & Quality',
-    emoji: '📋',
+    mark: 'CM',
     bio: 'Oversees day-to-day care delivery, care planning, supervision, and quality checks so every visit is safe, respectful, and well coordinated.',
     quals: ['Care planning','Quality assurance','Safeguarding oversight']
   },
   {
     name: 'Care Quality Team',
     role: 'Standards & Continuous Improvement',
-    emoji: '⭐',
+    mark: 'QT',
     bio: 'Reviews feedback, supports carers in the field, and keeps standards moving in the right direction through regular checks and practical coaching.',
     quals: ['Care reviews','Carer supervision','Continuous improvement']
   },
   {
     name: 'Operations Support',
     role: 'Scheduling & Service Coordination',
-    emoji: '🗓️',
+    mark: 'OS',
     bio: 'Keeps visits organised, communication clear, and carers supported so clients and families know what to expect and who to contact.',
     quals: ['Visit scheduling','Family communication','Responsive support']
   },
   {
     name: 'Care Coordination Team',
     role: 'Assessments & Care Plans',
-    emoji: '🤝',
+    mark: 'CC',
     bio: 'Listens carefully during assessments, builds personalised care plans, and keeps those plans updated as needs, routines, and preferences change.',
     quals: ['Home assessments','Personalised plans','Review meetings']
   },
   {
     name: 'Carer Development',
     role: 'Training & Support',
-    emoji: '📚',
+    mark: 'CD',
     bio: 'Supports carers from induction onward with practical guidance, refreshers, and a culture where asking for help is part of doing the job well.',
     quals: ['Induction support','Skills refreshers','Reflective practice']
   }
@@ -193,7 +193,7 @@ const skills = [
   { title: 'Patience & Resilience',         desc: 'Remaining calm, positive, and effective even in challenging situations — essential for delivering consistent, high-quality care.' },
   { title: 'Reliability & Punctuality',     desc: 'Clients depend on carers arriving when expected. Dependability builds trust and is fundamental to safe, quality care delivery.' },
   { title: 'Attention to Detail',           desc: 'Noticing changes in a client\'s condition, following care plans accurately, and maintaining detailed, accurate records.' },
-  { title: 'Respect for Dignity & Privacy', desc: 'Understanding and upholding the rights of individuals to privacy, autonomy, and dignified treatment at all times — a core CQC standard.' },
+  { title: 'Respect for Dignity & Privacy', desc: 'Understanding and upholding the rights of individuals to privacy, autonomy, and dignified treatment at all times — a core professional care standard.' },
   { title: 'Physical Stamina & Fitness',    desc: 'Home care can be physically demanding. Good fitness ensures carers can safely support clients with mobility and personal care tasks.' },
   { title: 'Teamwork & Collaboration',      desc: 'Working effectively alongside colleagues, families, GPs, nurses, and allied health professionals to deliver joined-up, coordinated care.' },
   { title: 'Problem Solving',               desc: 'The ability to assess situations quickly, make sound judgements, and respond calmly and effectively in unexpected circumstances.' },
@@ -224,10 +224,13 @@ const faqs = [
     q: 'What if I need care in an emergency or at short notice?',
     a: 'We do our very best to accommodate urgent care needs. Please contact our office team as soon as possible and we\'ll do everything we can to help. Existing clients can also reach our 24-hour on-call line outside of office hours.'
   },
+  /*
+  CQC FAQ paused for later:
   {
     q: 'Is Bloomhaven Care regulated by the CQC?',
     a: 'Yes. Bloomhaven Care is registered with and regulated by the Care Quality Commission (CQC). You can view our CQC profile here: <a href="https://www.cqc.org.uk/provider/REPLACE_WITH_CQC_PROVIDER_ID" target="_blank" rel="noopener">Bloomhaven Care CQC profile</a>.'
   },
+  */
   {
     q: 'Can care visits be adjusted as needs change over time?',
     a: 'Absolutely. Your care plan evolves with you. We conduct regular reviews and can adjust the frequency, type, and duration of care visits at any time. We believe in proactive, not reactive, care planning.'
@@ -438,7 +441,7 @@ function renderTeam() {
     const card = document.createElement('div');
     card.className = 'team-card reveal';
     card.innerHTML = `
-      <div class="team-img" aria-hidden="true">${m.emoji}</div>
+      <div class="team-img" aria-hidden="true">${m.mark}</div>
       <div class="team-body">
         <div class="team-name">${m.name}</div>
         <div class="team-role">${m.role}</div>
@@ -610,7 +613,7 @@ function showFormError(msg) {
   const err = document.createElement('p');
   err.id = 'formError';
   err.style.cssText = 'color:#c0392b;font-size:.85rem;margin-bottom:14px;padding:12px 16px;background:#fdf0f0;border-radius:8px;border:1px solid #f5c6cb;';
-  err.textContent = '⚠ ' + msg;
+  err.textContent = 'Please check: ' + msg;
   const btn = document.querySelector('.btn-submit');
   if (btn) btn.parentNode.insertBefore(err, btn);
 }
@@ -680,8 +683,8 @@ async function submitApply() {
       const wrap = document.getElementById('applyWrap');
       if (wrap) wrap.innerHTML = `
         <div style="text-align:center;padding:20px 0;color:var(--cream)">
-          <div style="font-size:2.5rem;margin-bottom:12px">💚</div>
-          <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:8px">Application received!</h3>
+          <div style="font-size:1.8rem;font-weight:800;margin-bottom:12px">OK</div>
+          <h3 style="font-family:var(--font-main);font-size:1.5rem;margin-bottom:8px">Application received!</h3>
           <p style="color:rgba(252,251,247,.75)">Thank you ${name}. We'll be in touch within two working days.</p>
         </div>`;
     } else {
@@ -699,7 +702,7 @@ function showApplyError(msg) {
   const err = document.createElement('p');
   err.id = 'applyError';
   err.style.cssText = 'color:#ffd3d3;font-size:.85rem;margin-bottom:14px;padding:10px 16px;background:rgba(255,100,100,.15);border-radius:8px;border:1px solid rgba(255,100,100,.3);';
-  err.textContent = '⚠ ' + msg;
+  err.textContent = 'Please check: ' + msg;
   const btn = document.getElementById('applyBtn');
   if (btn) btn.parentNode.insertBefore(err, btn);
 }

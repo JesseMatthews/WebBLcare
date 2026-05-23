@@ -15,8 +15,14 @@ const HEADER_HTML = `
   <div class="header-inner">
 
     <!-- Brand -->
-    <a class="nav-logo-wrap" href="index.html" aria-label="Bloomhaven Care — Home">
-      <img src="logo_transparent.png" alt="Bloomhaven Care logo" width="340" height="112">
+    <a class="nav-brand" href="index.html" aria-label="Bloomhaven Care home">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="logo_symbol_transparent.png" alt="">
+      </span>
+      <span class="brand-copy">
+        <span class="brand-title">Bloomhaven Care</span>
+        <span class="brand-subtitle">Homecare Agency</span>
+      </span>
     </a>
 
     <!-- Navigation -->
@@ -39,7 +45,15 @@ const HEADER_HTML = `
 
 <!-- Mobile full-screen menu -->
 <div id="mobileMenu" role="dialog" aria-label="Navigation menu" aria-hidden="true">
-  <img src="logo_transparent.png" alt="Bloomhaven Care" class="mobile-menu-logo">
+  <div class="mobile-menu-brand" aria-label="Bloomhaven Care homecare agency">
+    <span class="brand-mark" aria-hidden="true">
+      <img src="logo_symbol_transparent.png" alt="">
+    </span>
+    <span class="brand-copy">
+      <span class="brand-title">Bloomhaven Care</span>
+      <span class="brand-subtitle">Homecare Agency</span>
+    </span>
+  </div>
   <a href="index.html"    data-page="home">Home</a>
   <a href="services.html" data-page="services">Services</a>
   <a href="about.html"    data-page="about">About Us</a>
@@ -63,7 +77,7 @@ const FOOTER_HTML = `
           <img src="logo_transparent.png" alt="Bloomhaven Care" class="footer-logo-img">
         </div>
         <p class="footer-tagline">Compassionate Care. Trusted Support. Better Life.</p>
-        <p class="footer-desc">Professional, CQC registered home care across Preston and nearby communities, delivered with dignity, respect, and genuine warmth.</p>
+        <p class="footer-desc">Professional homecare agency supporting people across Preston and nearby communities with dignified, practical care at home.</p>
         <div class="footer-socials">
           <a class="social-btn" href="https://facebook.com/bloomhavencare" target="_blank" rel="noopener" aria-label="Facebook">f</a>
           <a class="social-btn" href="https://instagram.com/bloomhavencare" target="_blank" rel="noopener" aria-label="Instagram">
@@ -103,12 +117,12 @@ const FOOTER_HTML = `
       <div class="footer-col">
         <h4>Get In Touch</h4>
         <ul class="footer-links">
-          <li><a href="tel:07436125564">📞 07436 125564</a></li>
-          <li><a href="mailto:info@bloomhavencare.co.uk">✉️ info@bloomhavencare.co.uk</a></li>
-          <li><span aria-label="Service area">📍 Preston and surrounding areas</span></li>
-          <li><a href="https://www.google.com/maps/search/?api=1&query=4%20Derby%20Street%2C%20Preston%2C%20PR1%201DT" target="_blank" rel="noopener" aria-label="Registered office address">🏢 4 Derby Street, Preston, PR1 1DT</a></li>
-          <li><span aria-label="Opening hours">🕐 Mon–Fri 8am–6pm</span></li>
-          <li><span aria-label="Saturday hours">🕑 Sat 9am–1pm</span></li>
+          <li><a href="tel:07436125564">Phone: 07436 125564</a></li>
+          <li><a href="mailto:info@bloomhavencare.co.uk">Email: info@bloomhavencare.co.uk</a></li>
+          <li><span aria-label="Service area">Area: Preston and surrounding areas</span></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=4%20Derby%20Street%2C%20Preston%2C%20PR1%201DT" target="_blank" rel="noopener" aria-label="Registered office address">Office: 4 Derby Street, Preston, PR1 1DT</a></li>
+          <li><span aria-label="Opening hours">Hours: Mon–Fri 8am–6pm</span></li>
+          <li><span aria-label="Saturday hours">Saturday: 9am–1pm</span></li>
         </ul>
       </div>
 
@@ -116,9 +130,11 @@ const FOOTER_HTML = `
 
     <!-- Bottom bar -->
     <div class="footer-bottom">
-      <p>© 2026 Bloomhaven Care Ltd. All rights reserved. Registered in England & Wales. Company No. 17172482.</p>
+      <p>Copyright 2026 Bloomhaven Care Ltd. All rights reserved. Registered in England & Wales. Company No. 17172482.</p>
       <div class="footer-certs">
+        <!-- CQC badge paused for later:
         <a class="cert-badge" href="https://www.cqc.org.uk/provider/REPLACE_WITH_CQC_PROVIDER_ID" target="_blank" rel="noopener">CQC Registered</a>
+        -->
         <span class="cert-badge">ICO Registered</span>
         <span class="cert-badge">DBS Checked Staff</span>
       </div>
