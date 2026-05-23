@@ -909,6 +909,16 @@ a.trust-item:hover { color: var(--gold-light); }
   font-weight: 800;
   letter-spacing: .04em;
 }
+.what-pt-icon:empty,
+.who-card-icon:empty,
+.why-icon:empty,
+.modal-icon:empty,
+.value-icon:empty,
+.team-img:empty,
+.step-icon:empty,
+.quick-apply span:empty {
+  display: none;
+}
 .what-pt-text h4 {
   font-size: 1rem;
   font-weight: 600;
@@ -996,6 +1006,7 @@ a.trust-item:hover { color: var(--gold-light); }
 }
 
 .why-num {
+  display: none;
   font-family: var(--font-main);
   font-size: 3rem;
   font-weight: 700;

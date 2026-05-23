@@ -55,7 +55,7 @@ const SERVICE_IMAGES = [
 const services = [
   {
     title: 'Personal Care',
-    icon: 'PC',
+    icon: '',
     tag: 'Daily Living',
     color: 'linear-gradient(135deg,#1B5E3B,#2E7D52)',
     summary: 'Dignified, sensitive support with washing, dressing, and personal hygiene — delivered with respect and warmth.',
@@ -64,7 +64,7 @@ const services = [
   },
   {
     title: 'Medication Support',
-    icon: 'MS',
+    icon: '',
     tag: 'Health',
     color: 'linear-gradient(135deg,#2E7D52,#4CAF7D)',
     summary: 'Safe, accurate medication prompting and administration by trained carers — giving families total peace of mind.',
@@ -73,7 +73,7 @@ const services = [
   },
   {
     title: 'Companionship',
-    icon: 'CO',
+    icon: '',
     tag: 'Wellbeing',
     color: 'linear-gradient(135deg,#D4AF37,#E8CC6A)',
     summary: 'Meaningful social connection and emotional support to combat loneliness and enrich everyday life.',
@@ -82,7 +82,7 @@ const services = [
   },
   {
     title: 'Meal Preparation',
-    icon: 'MP',
+    icon: '',
     tag: 'Nutrition',
     color: 'linear-gradient(135deg,#1B5E3B,#D4AF37)',
     summary: 'Nutritious, home-cooked meals tailored to dietary needs, cultural preferences, and medical guidelines.',
@@ -91,7 +91,7 @@ const services = [
   },
   {
     title: 'Housekeeping',
-    icon: 'HK',
+    icon: '',
     tag: 'Home',
     color: 'linear-gradient(135deg,#4CAF7D,#2E7D52)',
     summary: 'Light domestic support to keep the home clean, safe, and comfortable — a peaceful sanctuary.',
@@ -100,7 +100,7 @@ const services = [
   },
   {
     title: 'Dementia Care',
-    icon: 'DC',
+    icon: '',
     tag: 'Specialist',
     color: 'linear-gradient(135deg,#0D2418,#1B5E3B)',
     summary: 'Specialist, compassionate support for people living with dementia — patient, consistent, and deeply caring.',
@@ -109,7 +109,7 @@ const services = [
   },
   {
     title: 'Live-In Care',
-    icon: 'LI',
+    icon: '',
     tag: '24/7 Support',
     color: 'linear-gradient(135deg,#2E7D52,#0D2418)',
     summary: 'Round-the-clock care from a dedicated live-in carer — a compassionate alternative to a residential care home.',
@@ -118,7 +118,7 @@ const services = [
   },
   {
     title: 'Mobility Support',
-    icon: 'MO',
+    icon: '',
     tag: 'Physical Support',
     color: 'linear-gradient(135deg,#1B5E3B,#4CAF7D)',
     summary: 'Safe, confident assistance with movement, transfers, and independence in and around the home.',
@@ -127,7 +127,7 @@ const services = [
   },
   {
     title: 'Night Care',
-    icon: 'NC',
+    icon: '',
     tag: 'Overnight',
     color: 'linear-gradient(135deg,#0D2418,#2E7D52)',
     summary: 'Reassuring overnight support so clients — and families — can rest with peace of mind.',
@@ -143,42 +143,42 @@ const team = [
   {
     name: 'Founding Leadership',
     role: 'Mission & Service Direction',
-    mark: 'LD',
+    mark: '',
     bio: 'Sets the standard for Bloomhaven Care: practical support delivered with kindness, dignity, and careful attention to each person\'s daily life.',
     quals: ['Person-centred care','Service leadership','Family-first values']
   },
   {
     name: 'Registered Care Management',
     role: 'Care Operations & Quality',
-    mark: 'CM',
+    mark: '',
     bio: 'Oversees day-to-day care delivery, care planning, supervision, and quality checks so every visit is safe, respectful, and well coordinated.',
     quals: ['Care planning','Quality assurance','Safeguarding oversight']
   },
   {
     name: 'Care Quality Team',
     role: 'Standards & Continuous Improvement',
-    mark: 'QT',
+    mark: '',
     bio: 'Reviews feedback, supports carers in the field, and keeps standards moving in the right direction through regular checks and practical coaching.',
     quals: ['Care reviews','Carer supervision','Continuous improvement']
   },
   {
     name: 'Operations Support',
     role: 'Scheduling & Service Coordination',
-    mark: 'OS',
+    mark: '',
     bio: 'Keeps visits organised, communication clear, and carers supported so clients and families know what to expect and who to contact.',
     quals: ['Visit scheduling','Family communication','Responsive support']
   },
   {
     name: 'Care Coordination Team',
     role: 'Assessments & Care Plans',
-    mark: 'CC',
+    mark: '',
     bio: 'Listens carefully during assessments, builds personalised care plans, and keeps those plans updated as needs, routines, and preferences change.',
     quals: ['Home assessments','Personalised plans','Review meetings']
   },
   {
     name: 'Carer Development',
     role: 'Training & Support',
-    mark: 'CD',
+    mark: '',
     bio: 'Supports carers from induction onward with practical guidance, refreshers, and a culture where asking for help is part of doing the job well.',
     quals: ['Induction support','Skills refreshers','Reflective practice']
   }
@@ -683,7 +683,6 @@ async function submitApply() {
       const wrap = document.getElementById('applyWrap');
       if (wrap) wrap.innerHTML = `
         <div style="text-align:center;padding:20px 0;color:var(--cream)">
-          <div style="font-size:1.8rem;font-weight:800;margin-bottom:12px">OK</div>
           <h3 style="font-family:var(--font-main);font-size:1.5rem;margin-bottom:8px">Application received!</h3>
           <p style="color:rgba(252,251,247,.75)">Thank you ${name}. We'll be in touch within two working days.</p>
         </div>`;
