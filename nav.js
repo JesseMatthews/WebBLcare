@@ -78,14 +78,6 @@ const FOOTER_HTML = `
         </div>
         <p class="footer-tagline">Compassionate Care. Trusted Support. Better Life.</p>
         <p class="footer-desc">Professional homecare agency supporting people across Preston and nearby communities with dignified, practical care at home.</p>
-        <div class="footer-socials">
-          <a class="social-btn" href="https://facebook.com/bloomhavencare" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-          <a class="social-btn" href="https://instagram.com/bloomhavencare" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a class="social-btn" href="https://linkedin.com/company/bloomhavencare" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-          <a class="social-btn" href="https://twitter.com/bloomhavencare" target="_blank" rel="noopener" aria-label="X / Twitter">𝕏</a>
-        </div>
       </div>
 
       <!-- Services -->
@@ -118,7 +110,7 @@ const FOOTER_HTML = `
         <h4>Get In Touch</h4>
         <ul class="footer-links">
           <li><a href="tel:07436125564">Phone: 07436 125564</a></li>
-          <li><a href="mailto:info@bloomhavencare.co.uk">Email: info@bloomhavencare.co.uk</a></li>
+          <li><a class="footer-email" href="mailto:info@bloomhavencare.co.uk">Email: info@bloomhavencare.co.uk</a></li>
           <li><span aria-label="Service area">Area: Preston and surrounding areas</span></li>
           <li><a href="https://www.google.com/maps/search/?api=1&query=4%20Derby%20Street%2C%20Preston%2C%20PR1%201DT" target="_blank" rel="noopener" aria-label="Registered office address">Office: 4 Derby Street, Preston, PR1 1DT</a></li>
           <li><span aria-label="Opening hours">Hours: Mon–Fri 8am–6pm</span></li>
