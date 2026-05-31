@@ -2018,22 +2018,18 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     min-height: max(100svh, 720px);
     align-items: center;
     padding-top: var(--nav-h);
-    background-color: var(--canopy);
-    background-image:
-      linear-gradient(180deg, rgba(21,45,72,.82) 0%, rgba(21,45,72,.68) 54%, rgba(21,45,72,.56) 100%),
-      var(--homecare-hero-image);
-    background-size: cover, contain;
-    background-position: center, center top;
-    background-repeat: no-repeat, no-repeat;
+    background-color: var(--cream);
+    background-image: var(--homecare-hero-image);
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
   }
   .recruit-hero {
-    background-color: var(--canopy);
-    background-image:
-      linear-gradient(180deg, rgba(21,45,72,.82) 0%, rgba(21,45,72,.68) 54%, rgba(21,45,72,.56) 100%),
-      var(--homecare-hero-image);
-    background-size: cover, contain;
-    background-position: center, center top;
-    background-repeat: no-repeat, no-repeat;
+    background-color: var(--cream);
+    background-image: var(--homecare-hero-image);
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
   }
   .hero-orbs { display: none; }
   .hero-content {
@@ -2057,6 +2053,21 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     overflow-wrap: anywhere;
     margin-bottom: 24px;
   }
+  .hero-text,
+  .hero-text h1,
+  .recruit-hero h1 {
+    color: var(--ink);
+  }
+  .hero-eyebrow {
+    color: var(--forest);
+  }
+  .hero-eyebrow::before {
+    background: var(--forest-mid);
+  }
+  .hero-sub,
+  .recruit-hero p {
+    color: var(--moss);
+  }
   .hero-actions {
     width: 100%;
     max-width: 100%;
@@ -2079,6 +2090,7 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     padding-top: 20px;
     width: 100%;
     max-width: 100%;
+    border-top-color: rgba(95,158,209,0.16);
   }
   .assurance {
     flex-direction: column;
@@ -2088,6 +2100,10 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     gap: 8px;
     padding: 11px 7px;
     text-align: center;
+    background: rgba(250,252,254,0.9);
+    border-color: rgba(95,158,209,0.16);
+    color: var(--ink);
+    box-shadow: var(--shadow-sm);
   }
   .assurance-icon {
     width: 22px;
@@ -2103,6 +2119,17 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     display: none;
   }
   .hero-badge-float { display: none; }
+  .hero .btn-outline-white,
+  .recruit-hero .btn-outline-white {
+    color: var(--forest);
+    border-color: rgba(95,158,209,0.45);
+  }
+  .hero .btn-outline-white:hover,
+  .recruit-hero .btn-outline-white:hover {
+    background: var(--forest);
+    border-color: var(--forest);
+    color: var(--cream);
+  }
 
   /* ── Grids ── */
   .why-grid { grid-template-columns: 1fr; }
