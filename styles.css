@@ -170,6 +170,8 @@ h1, h2, h3, h4 {
   max-width: 640px;
 }
 
+.copy-mobile { display: none; }
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -2017,24 +2019,22 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
   .hero {
     min-height: auto;
     align-items: center;
-    padding: calc(var(--nav-h) + 70px) 0 80px;
+    padding: calc(var(--nav-h) + 46px) 0 58px;
     background:
       linear-gradient(90deg, rgba(21,45,72,.78) 0%, rgba(21,45,72,.48) 55%, rgba(21,45,72,.32) 100%),
       var(--homecare-hero-image);
-    background-color: var(--canopy);
-    background-size: 100% 100%, auto 370px;
-    background-position: center, center top;
-    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .recruit-hero {
     background:
       linear-gradient(90deg, rgba(21,45,72,.78) 0%, rgba(21,45,72,.48) 55%, rgba(21,45,72,.32) 100%),
       var(--homecare-hero-image);
-    background-color: var(--canopy);
-    background-size: 100% 100%, auto 370px;
-    background-position: center, center top;
-    background-repeat: no-repeat, no-repeat;
-    padding: calc(var(--nav-h) + 70px) 0 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: calc(var(--nav-h) + 46px) 0 58px;
   }
   .hero-orbs { display: none; }
   .hero-content {
@@ -2043,10 +2043,19 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     width: min(680px, calc(100vw - 36px));
     max-width: 100%;
     margin: 0 auto;
+    text-align: center;
   }
+  .copy-desktop { display: none; }
+  .copy-mobile { display: inline; }
+  .hero-text { text-align: center; }
+  .hero-eyebrow { justify-content: center; }
   .hero-text h1 {
     font-size: clamp(1.9rem, 8vw, 2.65rem);
     margin-bottom: 20px;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: normal;
   }
   .hero-text,
   .hero-sub {
@@ -2054,17 +2063,13 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     max-width: 100%;
   }
   .hero-sub {
+    font-size: .96rem;
     line-height: 1.65;
     overflow-wrap: anywhere;
-    margin-bottom: 24px;
+    margin: 0 auto;
+    max-width: 330px;
   }
-  .hero-actions {
-    width: 100%;
-    max-width: 100%;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 34px;
-  }
+  .hero-actions { display: none; }
   .hero-actions .btn {
     width: 100%;
     max-width: 100%;
@@ -2075,11 +2080,7 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     text-align: center;
   }
   .hero-assurances {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-    padding-top: 20px;
-    width: 100%;
-    max-width: 100%;
+    display: none;
   }
   .assurance {
     flex-direction: column;
@@ -2104,6 +2105,30 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     display: none;
   }
   .hero-badge-float { display: none; }
+  .recruit-hero h1 {
+    font-size: clamp(1.78rem, 7.2vw, 2.2rem);
+    margin-bottom: 18px;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: normal;
+  }
+  .recruit-hero-copy {
+    margin: 0 auto !important;
+    line-height: 1.65 !important;
+    max-width: 330px !important;
+  }
+  .recruit-hero div[style*="display:flex;gap:14px"] {
+    display: none !important;
+  }
+  .trust-bar {
+    background: var(--cream);
+    border-bottom: 1px solid rgba(95,158,209,0.14);
+  }
+  .trust-item {
+    color: var(--ink);
+    border-right-color: rgba(95,158,209,0.14);
+  }
 
   /* ── Grids ── */
   .why-grid { grid-template-columns: 1fr; }
