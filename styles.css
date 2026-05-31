@@ -2015,25 +2015,28 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
 
   /* ── Hero ── */
   .hero {
-    min-height: max(100svh, 720px);
+    min-height: auto;
     align-items: center;
-    padding-top: var(--nav-h);
-    background-color: var(--cream);
-    background-image: var(--homecare-hero-image);
-    background-size: contain;
-    background-position: center top;
+    padding: calc(var(--nav-h) + 70px) 0 80px;
+    background:
+      linear-gradient(90deg, rgba(21,45,72,.78) 0%, rgba(21,45,72,.48) 55%, rgba(21,45,72,.32) 100%),
+      var(--homecare-hero-image);
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
   }
   .recruit-hero {
-    background-color: var(--cream);
-    background-image: var(--homecare-hero-image);
-    background-size: contain;
-    background-position: center top;
+    background:
+      linear-gradient(90deg, rgba(21,45,72,.78) 0%, rgba(21,45,72,.48) 55%, rgba(21,45,72,.32) 100%),
+      var(--homecare-hero-image);
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    padding: calc(var(--nav-h) + 70px) 0 80px;
   }
   .hero-orbs { display: none; }
   .hero-content {
-    padding: clamp(34px, 7svh, 52px) 0 clamp(38px, 7svh, 56px);
+    padding: 0;
     gap: 0;
     width: min(680px, calc(100vw - 36px));
     max-width: 100%;
@@ -2052,21 +2055,6 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     line-height: 1.65;
     overflow-wrap: anywhere;
     margin-bottom: 24px;
-  }
-  .hero-text,
-  .hero-text h1,
-  .recruit-hero h1 {
-    color: var(--ink);
-  }
-  .hero-eyebrow {
-    color: var(--forest);
-  }
-  .hero-eyebrow::before {
-    background: var(--forest-mid);
-  }
-  .hero-sub,
-  .recruit-hero p {
-    color: var(--moss);
   }
   .hero-actions {
     width: 100%;
@@ -2090,7 +2078,6 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     padding-top: 20px;
     width: 100%;
     max-width: 100%;
-    border-top-color: rgba(95,158,209,0.16);
   }
   .assurance {
     flex-direction: column;
@@ -2100,10 +2087,6 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     gap: 8px;
     padding: 11px 7px;
     text-align: center;
-    background: rgba(250,252,254,0.9);
-    border-color: rgba(95,158,209,0.16);
-    color: var(--ink);
-    box-shadow: var(--shadow-sm);
   }
   .assurance-icon {
     width: 22px;
@@ -2119,17 +2102,6 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     display: none;
   }
   .hero-badge-float { display: none; }
-  .hero .btn-outline-white,
-  .recruit-hero .btn-outline-white {
-    color: var(--forest);
-    border-color: rgba(95,158,209,0.45);
-  }
-  .hero .btn-outline-white:hover,
-  .recruit-hero .btn-outline-white:hover {
-    background: var(--forest);
-    border-color: var(--forest);
-    color: var(--cream);
-  }
 
   /* ── Grids ── */
   .why-grid { grid-template-columns: 1fr; }
@@ -2222,8 +2194,8 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
   .nav-brand { max-width: calc(100vw - 88px); }
   .brand-title { font-size: 1.25rem; }
   .brand-subtitle { font-size: .56rem; }
-  .hero { min-height: max(100svh, 690px); }
-  .hero-content { padding: 34px 0 42px; }
+  .hero { min-height: auto; }
+  .hero-content { padding: 0; }
   .hero-text h1 { font-size: clamp(1.8rem, 8.5vw, 2.25rem); }
   .hero-actions { margin-bottom: 28px; }
   .hero-assurances { gap: 7px; padding-top: 18px; }
