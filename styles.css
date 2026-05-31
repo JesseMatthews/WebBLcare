@@ -2122,10 +2122,10 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     display: none !important;
   }
   .hero-eyebrow {
-    color: var(--forest-deep);
+    color: var(--gold-light);
   }
   .hero-eyebrow::before {
-    background: var(--forest-deep);
+    background: var(--gold-light);
   }
   .hero-text h1,
   .page-header .section-title,
@@ -2133,13 +2133,19 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     color: var(--cream);
     text-shadow: 0 2px 16px rgba(13,36,24,0.58), 0 1px 2px rgba(13,36,24,0.5);
   }
+  .page-header .section-title {
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: normal;
+  }
   .hero-text h1 em,
   .page-header .section-title em,
   .recruit-hero h1 em {
     background: none;
-    color: var(--cream);
-    -webkit-text-fill-color: var(--cream);
-    text-shadow: inherit;
+    color: var(--gold-light);
+    -webkit-text-fill-color: var(--gold-light);
+    text-shadow: none;
   }
   .hero-sub,
   .page-header .section-sub,
