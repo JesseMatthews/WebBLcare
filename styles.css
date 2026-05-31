@@ -2121,12 +2121,38 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
   .recruit-hero div[style*="display:flex;gap:14px"] {
     display: none !important;
   }
+  .hero-eyebrow {
+    color: var(--forest-deep);
+  }
+  .hero-eyebrow::before {
+    background: var(--forest-deep);
+  }
+  .hero-text h1,
+  .page-header .section-title,
+  .recruit-hero h1 {
+    color: var(--cream);
+    text-shadow: 0 2px 16px rgba(13,36,24,0.58), 0 1px 2px rgba(13,36,24,0.5);
+  }
+  .hero-text h1 em,
+  .page-header .section-title em,
+  .recruit-hero h1 em {
+    background: none;
+    color: var(--cream);
+    -webkit-text-fill-color: var(--cream);
+    text-shadow: inherit;
+  }
+  .hero-sub,
+  .page-header .section-sub,
+  .recruit-hero p {
+    color: rgba(250,252,254,0.94);
+    text-shadow: 0 2px 12px rgba(13,36,24,0.56), 0 1px 2px rgba(13,36,24,0.45);
+  }
   .trust-bar {
     background: var(--cream);
     border-bottom: 1px solid rgba(95,158,209,0.14);
   }
   .trust-item {
-    color: var(--ink);
+    color: var(--forest-deep);
     border-right-color: rgba(95,158,209,0.14);
   }
 
