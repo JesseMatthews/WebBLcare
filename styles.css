@@ -2021,17 +2021,19 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
     background:
       linear-gradient(90deg, rgba(21,45,72,.78) 0%, rgba(21,45,72,.48) 55%, rgba(21,45,72,.32) 100%),
       var(--homecare-hero-image);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--canopy);
+    background-size: 100% 100%, auto clamp(340px, 48svh, 430px);
+    background-position: center, center top;
+    background-repeat: no-repeat, no-repeat;
   }
   .recruit-hero {
     background:
       linear-gradient(90deg, rgba(21,45,72,.78) 0%, rgba(21,45,72,.48) 55%, rgba(21,45,72,.32) 100%),
       var(--homecare-hero-image);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--canopy);
+    background-size: 100% 100%, auto clamp(340px, 48svh, 430px);
+    background-position: center, center top;
+    background-repeat: no-repeat, no-repeat;
     padding: calc(var(--nav-h) + 70px) 0 80px;
   }
   .hero-orbs { display: none; }
