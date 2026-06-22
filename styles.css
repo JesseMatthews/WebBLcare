@@ -136,6 +136,31 @@ body {
   z-index: 9999; transition: width .1s linear; pointer-events: none;
 }
 
+.hours-notice {
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: var(--gold-pale);
+  color: var(--ink);
+  text-align: center;
+  padding: 12px 20px;
+  font-size: .88rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(123, 175, 92, 0.35);
+  transition: top .4s var(--ease);
+  box-shadow: 0 4px 12px rgba(35, 58, 91, 0.08);
+}
+
+.hours-notice[hidden] {
+  display: none !important;
+}
+
+body.header-scrolled .hours-notice {
+  top: var(--nav-h-collapsed);
+}
+
 /* ════════════════════════════════════════════════════════
    [TYPOGRAPHY]
    ════════════════════════════════════════════════════════ */
@@ -963,7 +988,7 @@ a.trust-item:hover { color: var(--gold-light); }
   align-self: center;
 }
 .who-card {
-  background: rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.16);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-sm);
   padding: 22px;
@@ -2296,4 +2321,76 @@ a.cert-badge:hover { background: rgba(212,175,55,0.2); color: var(--cream); }
   /* Modal full width on mobile */
   .modal { max-height: 95vh; border-radius: var(--radius-sm); }
   .modal-body, .modal-header { padding: 20px 18px; }
+}
+
+
+/* ===== BLOOMHAVEN MASTER BUILD ===== */
+
+/* Header branding */
+.brand-title{
+ font-family:"Cinzel","Times New Roman",serif !important;
+ text-transform:uppercase;
+ letter-spacing:.06em;
+ color:#f2f4f7 !important;
+ font-weight:600 !important;
+}
+.brand-subtitle{
+ font-family:"Cinzel","Times New Roman",serif !important;
+ color:#2d6fc2 !important;
+ letter-spacing:.25em;
+ text-transform:uppercase;
+}
+
+/* Who We Are cards */
+.who-card{
+ background:#fff !important;
+ border:1px solid rgba(95,168,232,.18);
+ box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+.who-card h4{color:#2d6fc2 !important;}
+.who-card p{color:#55708f !important;}
+
+/* Alternating animations */
+.who-card.from-left,.why-card.from-left,.value-card.from-left{
+ opacity:0;transform:translateX(-80px);transition:all .8s ease;
+}
+.who-card.from-right,.why-card.from-right,.value-card.from-right{
+ opacity:0;transform:translateX(80px);transition:all .8s ease;
+}
+.who-card.reveal-in,.why-card.reveal-in,.value-card.reveal-in{
+ opacity:1;transform:translateX(0);
+}
+
+/* How it works mobile */
+@media (max-width:768px){
+ .step-card{
+   background:#fff;
+   border-radius:18px;
+   padding:18px;
+   box-shadow:0 10px 24px rgba(0,0,0,.08);
+ }
+ .step-card:nth-child(odd){margin-right:12%;}
+ .step-card:nth-child(even){margin-left:12%;}
+}
+
+
+/* Header branding refinement */
+.brand-title{
+  color:#183a6b !important;
+  font-size:clamp(1.8rem,3vw,2.8rem) !important;
+  font-weight:700 !important;
+  text-shadow:none !important;
+  opacity:1 !important;
+}
+
+.brand-subtitle{
+  color:#9ACD66 !important;
+  font-size:0.95rem !important;
+  font-weight:700 !important;
+  letter-spacing:.30em !important;
+  opacity:1 !important;
+}
+
+.brand-copy{
+  opacity:1 !important;
 }
