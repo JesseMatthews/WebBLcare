@@ -111,7 +111,7 @@ const FOOTER_HTML = `
         <ul class="footer-links">
           <li><a href="tel:07436125564">Phone: 07436 125564</a></li>
           <li><a class="footer-email" href="mailto:info@bloomhavencare.co.uk">Email: info@bloomhavencare.co.uk</a></li>
-          <li><span aria-label="Service area">Area: Preston and surrounding areas</span></li>
+          <li><span aria-label="Service area">Area: Lancashire(Preston, Lytham, Fleetwood ans Blackpool)</span></li>
           <li><a href="https://www.google.com/maps/search/?api=1&query=4%20Derby%20Street%2C%20Preston%2C%20PR1%201DT" target="_blank" rel="noopener" aria-label="Registered office address">Office: 4 Derby Street, Preston, PR1 1DT</a></li>
           <li><span aria-label="Opening hours">Hours: Mon–Fri 8am–6pm</span></li>
           <li><span aria-label="Saturday hours">Saturday: 9am–1pm</span></li>
@@ -153,6 +153,79 @@ const FOOTER_HTML = `
 </a>
 `;
 
+const HOURS_NOTICE_HTML = `<div id="hoursNotice" class="hours-notice" role="status" aria-live="polite" hidden></div>`;
+const OFFICE_HOURS = [
+  null,
+  { open: 8, close: 18 },
+  { open: 8, close: 18 },
+  { open: 8, close: 18 },
+  { open: 8, close: 18 },
+  { open: 8, close: 18 },
+  { open: 9, close: 13 }
+];
+
+const DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+function getLondonTimeParts(date = new Date()) {
+  const parts = new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Europe/London',
+    weekday: 'short',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  }).formatToParts(date);
+  const get = (type) => parts.find(p => p.type === type).value;
+  const dayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+  return {
+    day: dayMap[get('weekday')],
+    minutes: parseInt(get('hour'), 10) * 60 + parseInt(get('minute'), 10)
+  };
+}
+
+function isOfficeOpen(date = new Date()) {
+  const { day, minutes } = getLondonTimeParts(date);
+  const schedule = OFFICE_HOURS[day];
+  if (!schedule) return false;
+  return minutes >= schedule.open * 60 && minutes < schedule.close * 60;
+}
+
+function formatOpenTime(hour) {
+  return hour === 9 ? '9am' : `${hour}am`;
+}
+
+function getClosedNotice(date = new Date()) {
+  const { day, minutes } = getLondonTimeParts(date);
+  const schedule = OFFICE_HOURS[day];
+  const urgent = 'For urgent existing client needs, call 07436 125564.';
+
+  if (schedule && minutes < schedule.open * 60) {
+    return `We're currently closed — we'll respond to your message when we open at ${formatOpenTime(schedule.open)} today. ${urgent}`;
+  }
+
+  for (let offset = 1; offset <= 7; offset++) {
+    const nextDay = (day + offset) % 7;
+    if (OFFICE_HOURS[nextDay]) {
+      return `We're currently closed — we'll respond to your message on ${DAY_NAMES[nextDay]}. ${urgent}`;
+    }
+  }
+
+  return `We're currently closed — we'll respond to your message soon. ${urgent}`;
+}
+
+function updateHoursNotice() {
+  const hoursNotice = document.getElementById('hoursNotice');
+  if (!hoursNotice) return;
+
+  if (isOfficeOpen()) {
+    hoursNotice.hidden = true;
+    document.body.classList.remove('hours-notice-visible');
+  } else {
+    hoursNotice.textContent = getClosedNotice();
+    hoursNotice.hidden = false;
+    document.body.classList.add('hours-notice-visible');
+  }
+}
+
 /* ══════════════════════════════════════════════
    INJECT INTO PAGE
    ══════════════════════════════════════════════ */
@@ -160,7 +233,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Inject header */
   const headerSlot = document.getElementById('header-placeholder');
-  if (headerSlot) headerSlot.innerHTML = HEADER_HTML;
+  if (headerSlot) {
+    headerSlot.innerHTML = HEADER_HTML;
+    headerSlot.insertAdjacentHTML('afterend', HOURS_NOTICE_HTML);
+    updateHoursNotice();
+  }
 
   /* Inject footer */
   const footerSlot = document.getElementById('footer-placeholder');
@@ -196,9 +273,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (scrolled > 60) {
         header.classList.remove('at-top');
         header.classList.add('scrolled');
+        document.body.classList.add('header-scrolled');
       } else {
         header.classList.add('at-top');
         header.classList.remove('scrolled');
+        document.body.classList.remove('header-scrolled');
       }
     }
 
@@ -268,24 +347,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, { threshold: 0.12 });
     revealEls.forEach(el => revealObserver.observe(el));
-  }
-
-  /* ── Opening hours banner ── */
-  const hoursNotice = document.getElementById('hoursNotice');
-  if (hoursNotice) {
-    const now = new Date();
-    const day = now.getDay(); // 0=Sun, 6=Sat
-    const hour = now.getHours();
-    const isOpen = (day >= 1 && day <= 5 && hour >= 8 && hour < 18) ||
-                   (day === 6 && hour >= 9 && hour < 13);
-    if (!isOpen) {
-      const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-      let nextDay = 'Monday';
-      if (day === 5 || day === 6) nextDay = 'Monday';
-      else nextDay = days[day + 1];
-      hoursNotice.textContent = `We're currently closed — we'll respond to your message on ${nextDay}. For urgent existing client needs, call 07436 125564.`;
-      hoursNotice.style.display = 'block';
-    }
   }
 
 });
