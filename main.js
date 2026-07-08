@@ -22,32 +22,12 @@ const FORM_CONFIG = {
   cc: '',
 };
 
-const SERVICE_IMAGES = [
-  {
-    src: 'https://images.unsplash.com/photo-1666887360680-9dc27a1d2753?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9tZSUyMGhlYWx0aCUyMGNhcmV8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=72&w=900',
-    alt: 'Care professional checking blood pressure during a home visit'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1723433892471-62f113c8c9a0?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9tZSUyMGhlYWx0aCUyMGNhcmV8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=72&w=900',
-    alt: 'Care worker supporting an older person using a wheelchair'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1765896387377-e293914d1e69?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhvbWUlMjBoZWFsdGglMjBjYXJlfGVufDB8fDB8fHww&ixlib=rb-4.1.0&q=72&w=900',
-    alt: 'Care worker and older person laughing together indoors'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1666887360726-f55472d96c34?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG9tZSUyMGhlYWx0aCUyMGNhcmV8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=72&w=900',
-    alt: 'Care worker helping an older person use a tablet'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1658632302217-984d432b4d38?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aG9tZSUyMGhlYWx0aCUyMGNhcmV8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=72&w=900',
-    alt: 'Care worker speaking with an older person in a living room'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1758691462477-976f771224d8?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGhvbWUlMjBoZWFsdGglMjBjYXJlfGVufDB8fDB8fHww&ixlib=rb-4.1.0&q=72&w=900',
-    alt: 'Home care consultation with an older person on a couch'
-  }
-];
+function unsplashPhoto(id, alt) {
+  return {
+    src: `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=72&w=900`,
+    alt
+  };
+}
 
 /* ════════════════════════════════════════════
    [DATA] — SERVICES
@@ -58,6 +38,7 @@ const services = [
     icon: '',
     tag: 'Daily Living',
     color: 'linear-gradient(135deg,#1B5E3B,#2E7D52)',
+    image: unsplashPhoto('1649072997858-e3b8d12f3fe4', 'Soap, brush and toiletries for personal hygiene and grooming'),
     summary: 'Dignified, sensitive support with washing, dressing, and personal hygiene — delivered with respect and warmth.',
     description: 'Our personal care service provides respectful, sensitive support with all aspects of personal hygiene and daily grooming. Every carer is trained to uphold the dignity and privacy of each client throughout every visit.',
     includes: ['Bathing and showering assistance','Hair washing and styling','Dressing and undressing','Oral hygiene and dental care','Skincare and moisturising','Toileting and continence support','Shaving and grooming','Morning and evening routines']
@@ -67,6 +48,7 @@ const services = [
     icon: '',
     tag: 'Health',
     color: 'linear-gradient(135deg,#2E7D52,#4CAF7D)',
+    image: unsplashPhoto('1666887360680-9dc27a1d2753', 'Care professional checking health during a home visit'),
     summary: 'Safe, accurate medication prompting and administration by trained carers — giving families total peace of mind.',
     description: 'Our trained carers provide reliable support to ensure medications are taken correctly, at the right time, every day. We liaise with pharmacies and GPs to ensure your loved one\'s health is always in safe hands.',
     includes: ['Medication reminders and prompting','Administration of prescribed medicines','Ordering repeat prescriptions','Liaising with pharmacies and GPs','Medication record keeping','Monitoring for side effects','Safe medication storage checks']
@@ -76,6 +58,7 @@ const services = [
     icon: '',
     tag: 'Wellbeing',
     color: 'linear-gradient(135deg,#D4AF37,#E8CC6A)',
+    image: unsplashPhoto('1765896387377-e293914d1e69', 'Care worker and older person laughing together indoors'),
     summary: 'Meaningful social connection and emotional support to combat loneliness and enrich everyday life.',
     description: 'Our companionship service goes far beyond simply being present. Our carers build genuine, lasting relationships — sharing interests, conversations, laughter, and life experiences with the people they support.',
     includes: ['Friendly conversation and social interaction','Accompanying to appointments and outings','Help with hobbies and interests','Reading, puzzles and activities','Support attending community events','Technology help (video calls with family)','Light emotional support and reassurance']
@@ -85,6 +68,7 @@ const services = [
     icon: '',
     tag: 'Nutrition',
     color: 'linear-gradient(135deg,#1B5E3B,#D4AF37)',
+    image: unsplashPhoto('1765200231320-987437f4acc5', 'Elderly couple preparing food together in a home kitchen'),
     summary: 'Nutritious, home-cooked meals tailored to dietary needs, cultural preferences, and medical guidelines.',
     description: 'Our carers prepare delicious, nutritious meals following individual dietary requirements, cultural preferences, and medical guidelines — ensuring every client is well nourished and enjoys mealtimes.',
     includes: ['Breakfast, lunch and dinner preparation','Tailored menus for dietary needs','Grocery shopping assistance','Monitoring food and fluid intake','Special diet support (diabetic, puréed, etc.)','Kitchen tidying and washing up','Batch cooking and meal planning']
@@ -94,6 +78,7 @@ const services = [
     icon: '',
     tag: 'Home',
     color: 'linear-gradient(135deg,#4CAF7D,#2E7D52)',
+    image: unsplashPhoto('1758687125687-512a331f6a0a', 'Person vacuuming a rug during light home housekeeping'),
     summary: 'Light domestic support to keep the home clean, safe, and comfortable — a peaceful sanctuary.',
     description: 'Our housekeeping service covers essential domestic tasks that keep a home comfortable and safe. This allows clients to focus on enjoying their day and the things they love, not household chores.',
     includes: ['Vacuuming and sweeping floors','Dusting and surface cleaning','Bathroom and kitchen cleaning','Laundry and ironing','Changing bed linen','Taking out bins','Light garden tidying']
@@ -103,6 +88,7 @@ const services = [
     icon: '',
     tag: 'Specialist',
     color: 'linear-gradient(135deg,#0D2418,#1B5E3B)',
+    image: unsplashPhoto('1762955911431-4c44c7c3f408', 'Caregiver assisting an elderly couple with a calming activity'),
     summary: 'Specialist, compassionate support for people living with dementia — patient, consistent, and deeply caring.',
     description: 'Our dementia-trained carers use person-centred approaches to support clients at all stages of the condition. We work to maintain familiar routines, stimulate positive memories, and provide a calm, reassuring presence.',
     includes: ['Specialist dementia care training','Consistent carer assignment','Routine and structure maintenance','Reminiscence therapy activities','Behavioural and emotional support','Family communication and guidance','Safe home environment support']
@@ -112,6 +98,7 @@ const services = [
     icon: '',
     tag: '24/7 Support',
     color: 'linear-gradient(135deg,#2E7D52,#0D2418)',
+    image: unsplashPhoto('1543333995-a78aea2eee50', 'Caregiver supporting an older person in their own home'),
     summary: 'Round-the-clock care from a dedicated live-in carer — a compassionate alternative to a residential care home.',
     description: 'Live-in care allows individuals to remain in their own beloved home with round-the-clock support from a dedicated, trained carer. This is often the preferred alternative to moving into a care home — maintaining independence, familiarity, and comfort.',
     includes: ['24-hour care and companionship','Sleep-in or waking nights available','All daily living tasks covered','Specialist care as required','Regular carer rotations for continuity','Full family communication and updates','Emergency response at any hour']
@@ -121,6 +108,7 @@ const services = [
     icon: '',
     tag: 'Physical Support',
     color: 'linear-gradient(135deg,#1B5E3B,#4CAF7D)',
+    image: unsplashPhoto('1723433892471-62f113c8c9a0', 'Care worker supporting an older person using a wheelchair'),
     summary: 'Safe, confident assistance with movement, transfers, and independence in and around the home.',
     description: 'Our carers receive full manual handling training and work in partnership with physiotherapists and occupational therapists to support safe movement. We help clients move with confidence and dignity.',
     includes: ['Safe transfers (bed, chair, toilet)','Walking and mobility aid support','Exercise and rehabilitation support','Falls prevention and awareness','Hoist and equipment use','Physiotherapy exercise encouragement','Confidence building for independence']
@@ -130,6 +118,7 @@ const services = [
     icon: '',
     tag: 'Overnight',
     color: 'linear-gradient(135deg,#0D2418,#2E7D52)',
+    image: unsplashPhoto('1734599395438-1ec2a861ed8d', 'Bedside drinks and tea prepared for overnight comfort at home'),
     summary: 'Reassuring overnight support so clients — and families — can rest with peace of mind.',
     description: 'We offer both sleep-in and waking night care. Our night carers provide a calm, reassuring presence throughout the night and respond immediately to any needs — giving families the rest they deserve.',
     includes: ['Sleep-in carer (available if needed)','Waking night carer (awake throughout)','Toileting and continence support','Medication administration','Repositioning and pressure care','Reassurance for anxiety or dementia','Emergency response readiness']
@@ -224,11 +213,10 @@ const faqs = [
     q: 'What if I need care in an emergency or at short notice?',
     a: 'We do our very best to accommodate urgent care needs. Please contact our office team as soon as possible and we\'ll do everything we can to help. Existing clients can also reach our 24-hour on-call line outside of office hours.'
   },
-  /*
-  CQC FAQ paused for later:
+  /* CQC: Replace YOUR_CQC_PROVIDER_ID below, then delete the /* and *‍/ markers around this object (and its trailing comma) to activate, and add it into the faqs array above
   {
     q: 'Is Bloomhaven Care regulated by the CQC?',
-    a: 'Yes. Bloomhaven Care is registered with and regulated by the Care Quality Commission (CQC). You can view our CQC profile here: <a href="https://www.cqc.org.uk/provider/REPLACE_WITH_CQC_PROVIDER_ID" target="_blank" rel="noopener">Bloomhaven Care CQC profile</a>.'
+    a: 'Yes. Bloomhaven Care is registered with and regulated by the Care Quality Commission (CQC). You can view our CQC profile here: <a href="https://www.cqc.org.uk/provider/YOUR_CQC_PROVIDER_ID" target="_blank" rel="noopener">Bloomhaven Care CQC profile</a>.'
   },
   */
   {
@@ -383,7 +371,7 @@ function renderServices() {
   if (!grid) return;
 
   services.forEach((s, i) => {
-    const image = s.image || SERVICE_IMAGES[i % SERVICE_IMAGES.length];
+    const image = s.image;
     const card = document.createElement('div');
     card.className = 'service-card reveal';
     card.setAttribute('role', 'button');
@@ -705,3 +693,19 @@ function showApplyError(msg) {
   const btn = document.getElementById('applyBtn');
   if (btn) btn.parentNode.insertBefore(err, btn);
 }
+
+
+/* BLOOMHAVEN_MASTER_BUILD */
+document.addEventListener('DOMContentLoaded',()=>{
+ const cards=document.querySelectorAll('.who-card,.why-card,.value-card');
+ cards.forEach((c,i)=>c.classList.add(i%2===0?'from-left':'from-right'));
+ const io=new IntersectionObserver((entries)=>{
+   entries.forEach(e=>{
+     if(e.isIntersecting) e.target.classList.add('reveal-in');
+     else e.target.classList.remove('reveal-in');
+   });
+ },{threshold:0.15});
+ cards.forEach(c=>io.observe(c));
+});
+
+document.addEventListener('DOMContentLoaded',()=>{const els=document.querySelectorAll('.card,.service-card,.feature,.box');els.forEach(e=>e.classList.add('reveal-on-scroll'));const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting)x.target.classList.add('revealed')}),{threshold:.1});els.forEach(e=>io.observe(e));});
