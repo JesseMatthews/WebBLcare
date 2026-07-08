@@ -707,5 +707,4 @@ document.addEventListener('DOMContentLoaded',()=>{
  },{threshold:0.15});
  cards.forEach(c=>io.observe(c));
 });
-
 document.addEventListener('DOMContentLoaded',()=>{const els=document.querySelectorAll('.card,.service-card,.feature,.box');els.forEach(e=>e.classList.add('reveal-on-scroll'));const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting)x.target.classList.add('revealed')}),{threshold:.1});els.forEach(e=>io.observe(e));});
